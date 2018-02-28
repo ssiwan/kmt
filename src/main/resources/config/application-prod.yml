@@ -16,7 +16,7 @@
 logging:
     level:
         ROOT: INFO
-        com.dhs: INFO
+        com.dhsynergetech: INFO
         io.github.jhipster: INFO
 
 spring:
@@ -94,9 +94,12 @@ jhipster:
         cache: # Used by the CachingHttpHeadersFilter
             timeToLiveInDays: 1461
     security:
-        remember-me:
-            # security key (this key should be unique for your application, and kept secret)
-            key: bd75250bac26938b5fce90c7191aecd8aa2ed2a4
+        authentication:
+            jwt:
+                secret: c92a343697383c1ddf62a919b2dd46b7b7834e0e
+                # Token is valid 24 hours
+                token-validity-in-seconds: 86400
+                token-validity-in-seconds-for-remember-me: 2592000
     mail: # specific JHipster mail property, for standard properties see MailProperties
         from: DHSKnowledgeManagement@localhost
         base-url: http://my-server-url-to-change # Modify according to your server's URL
