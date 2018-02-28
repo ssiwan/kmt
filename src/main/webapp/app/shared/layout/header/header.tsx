@@ -28,7 +28,7 @@ export interface IHeaderProps {
 const BrandIcon = props => (
   <div {...props} className="brand-icon">
     <img
-      src="static/images/logo-jhipster-react.svg"
+      src="static/images/LogoNavCalFire.gif"
       alt="Logo"
     />
   </div>
@@ -119,7 +119,7 @@ export class Header extends React.Component<IHeaderProps, { menuOpen: boolean }>
                 <UncontrolledNavDropdown key="admin">
                   <DropdownToggle nav caret className="d-flex align-items-center">
                     <FaUserPlus />
-                    <span>Administration</span>
+                    <span><Translate contentKey="global.menu.admin.main">Administration</Translate></span>
                   </DropdownToggle>
                   <DropdownMenu right style={{ width: '120%' }}>
                     {adminMenuItems}
@@ -130,7 +130,7 @@ export class Header extends React.Component<IHeaderProps, { menuOpen: boolean }>
                 <UncontrolledNavDropdown>
                   <DropdownToggle nav caret className="d-flex align-items-center">
                     <FaFlag />
-                    <span>{currentLocale.toUpperCase()}</span>
+                    <span><Translate contentKey="global.menu.language">Language</Translate></span>
                   </DropdownToggle>
                   <DropdownMenu right>
                     {locales.map(lang => <DropdownItem key={lang} value={lang} onClick={this.handleLocaleChange}>{lang.toUpperCase()}</DropdownItem>)}
@@ -140,7 +140,7 @@ export class Header extends React.Component<IHeaderProps, { menuOpen: boolean }>
               <UncontrolledNavDropdown>
                 <DropdownToggle nav caret className="d-flex align-items-center">
                   <FaUser />
-                  <span>Account</span>
+                  <span><Translate contentKey="global.menu.account.main">Account</Translate></span>
                 </DropdownToggle>
                 <DropdownMenu right>
                   {accountMenuItems}
