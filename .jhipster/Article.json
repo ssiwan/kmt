@@ -1,0 +1,74 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "attachment",
+            "otherEntityName": "attachment",
+            "relationshipType": "many-to-many",
+            "otherEntityField": "name",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "article"
+        },
+        {
+            "relationshipName": "tag",
+            "otherEntityName": "tag",
+            "relationshipType": "many-to-many",
+            "otherEntityField": "name",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "article"
+        },
+        {
+            "relationshipName": "station",
+            "otherEntityName": "station",
+            "relationshipType": "many-to-many",
+            "otherEntityField": "name",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "article"
+        },
+        {
+            "relationshipName": "engine",
+            "otherEntityName": "engine",
+            "relationshipType": "many-to-many",
+            "otherEntityField": "number",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "article"
+        },
+        {
+            "relationshipName": "changelog",
+            "otherEntityName": "changelog",
+            "relationshipType": "many-to-many",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "article"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "title",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "detail",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "text"
+        },
+        {
+            "fieldName": "preview",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "ArticleStatus",
+            "fieldValues": "DRAFT,APPROVED"
+        }
+    ],
+    "changelogDate": "20180301123938",
+    "dto": "mapstruct",
+    "service": "serviceClass",
+    "entityTableName": "article",
+    "jpaMetamodelFiltering": false,
+    "pagination": "pagination"
+}

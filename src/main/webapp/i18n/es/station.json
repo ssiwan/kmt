@@ -1,0 +1,24 @@
+
+{
+    "dhsKnowledgeManagementApp": {
+        "station" : {
+            "home": {
+                "title": "Stations",
+                "createLabel": "Crear nuevo Station",
+                "createOrEditLabel": "Crear o editar Station"
+            },
+            "created": "Un nuevo Station ha sido creado con el identificador {{ param }}",
+            "updated": "Un Station ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Station ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Station {{ id }}?"
+            },
+            "detail": {
+                "title": "Station"
+            },
+            "name": "Name",
+            "county": "County",
+            "article": "Article"
+        }
+    }
+}

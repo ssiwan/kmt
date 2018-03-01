@@ -1,0 +1,31 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "article",
+            "otherEntityName": "article",
+            "relationshipType": "many-to-many",
+            "ownerSide": false,
+            "otherEntityRelationshipName": "station"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "county",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20180301111102",
+    "dto": "mapstruct",
+    "service": "serviceClass",
+    "entityTableName": "station",
+    "jpaMetamodelFiltering": false,
+    "pagination": "pagination"
+}

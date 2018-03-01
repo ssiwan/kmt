@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <!--
+        Added the constraints for entity Article.
+    -->
+    <changeSet id="20180301123938-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="articles_id"
+                                 baseTableName="article_attachment"
+                                 constraintName="fk_article_attachment_articles_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="article"/>
+        <addForeignKeyConstraint baseColumnNames="attachments_id"
+                                 baseTableName="article_attachment"
+                                 constraintName="fk_article_attachment_attachments_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="attachment"/>
+        
+        <addForeignKeyConstraint baseColumnNames="articles_id"
+                                 baseTableName="article_tag"
+                                 constraintName="fk_article_tag_articles_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="article"/>
+        <addForeignKeyConstraint baseColumnNames="tags_id"
+                                 baseTableName="article_tag"
+                                 constraintName="fk_article_tag_tags_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tag"/>
+        
+        <addForeignKeyConstraint baseColumnNames="articles_id"
+                                 baseTableName="article_station"
+                                 constraintName="fk_article_station_articles_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="article"/>
+        <addForeignKeyConstraint baseColumnNames="stations_id"
+                                 baseTableName="article_station"
+                                 constraintName="fk_article_station_stations_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="station"/>
+        
+        <addForeignKeyConstraint baseColumnNames="articles_id"
+                                 baseTableName="article_engine"
+                                 constraintName="fk_article_engine_articles_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="article"/>
+        <addForeignKeyConstraint baseColumnNames="engines_id"
+                                 baseTableName="article_engine"
+                                 constraintName="fk_article_engine_engines_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="engine"/>
+        
+        <addForeignKeyConstraint baseColumnNames="articles_id"
+                                 baseTableName="article_changelog"
+                                 constraintName="fk_article_changelog_articles_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="article"/>
+        <addForeignKeyConstraint baseColumnNames="changelogs_id"
+                                 baseTableName="article_changelog"
+                                 constraintName="fk_article_changelog_changelogs_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="changelog"/>
+        
+    </changeSet>
+</databaseChangeLog>

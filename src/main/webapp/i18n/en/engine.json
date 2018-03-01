@@ -1,0 +1,24 @@
+
+{
+    "dhsKnowledgeManagementApp": {
+        "engine" : {
+            "home": {
+                "title": "Engines",
+                "createLabel": "Create a new Engine",
+                "createOrEditLabel": "Create or edit a Engine"
+            },
+            "created": "A new Engine is created with identifier {{ param }}",
+            "updated": "A Engine is updated with identifier {{ param }}",
+            "deleted": "A Engine is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Engine {{ id }}?"
+            },
+            "detail": {
+                "title": "Engine"
+            },
+            "number": "Number",
+            "status": "Status",
+            "article": "Article"
+        }
+    }
+}

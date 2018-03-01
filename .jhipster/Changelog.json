@@ -1,0 +1,32 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "user",
+            "otherEntityName": "user",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "login",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "changelog"
+        },
+        {
+            "relationshipName": "article",
+            "otherEntityName": "article",
+            "relationshipType": "many-to-many",
+            "ownerSide": false,
+            "otherEntityRelationshipName": "changelog"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "modified",
+            "fieldType": "Instant"
+        }
+    ],
+    "changelogDate": "20180301113102",
+    "dto": "mapstruct",
+    "service": "serviceClass",
+    "entityTableName": "changelog",
+    "jpaMetamodelFiltering": false,
+    "pagination": "pagination"
+}

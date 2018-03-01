@@ -1,0 +1,24 @@
+
+{
+    "dhsKnowledgeManagementApp": {
+        "changelog" : {
+            "home": {
+                "title": "Changelogs",
+                "createLabel": "Create a new Changelog",
+                "createOrEditLabel": "Create or edit a Changelog"
+            },
+            "created": "A new Changelog is created with identifier {{ param }}",
+            "updated": "A Changelog is updated with identifier {{ param }}",
+            "deleted": "A Changelog is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Changelog {{ id }}?"
+            },
+            "detail": {
+                "title": "Changelog"
+            },
+            "modified": "Modified",
+            "user": "User",
+            "article": "Article"
+        }
+    }
+}

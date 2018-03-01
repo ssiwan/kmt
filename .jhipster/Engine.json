@@ -1,0 +1,32 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "article",
+            "otherEntityName": "article",
+            "relationshipType": "many-to-many",
+            "ownerSide": false,
+            "otherEntityRelationshipName": "engine"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "number",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "EngineStatus",
+            "fieldValues": "READY,UNSTAFFED,OUTOFSERVICE,INTRANSIT"
+        }
+    ],
+    "changelogDate": "20180301111844",
+    "dto": "mapstruct",
+    "service": "serviceClass",
+    "entityTableName": "engine",
+    "jpaMetamodelFiltering": false,
+    "pagination": "pagination"
+}

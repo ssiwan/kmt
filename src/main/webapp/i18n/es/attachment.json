@@ -1,0 +1,24 @@
+
+{
+    "dhsKnowledgeManagementApp": {
+        "attachment" : {
+            "home": {
+                "title": "Attachments",
+                "createLabel": "Crear nuevo Attachment",
+                "createOrEditLabel": "Crear o editar Attachment"
+            },
+            "created": "Un nuevo Attachment ha sido creado con el identificador {{ param }}",
+            "updated": "Un Attachment ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Attachment ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Attachment {{ id }}?"
+            },
+            "detail": {
+                "title": "Attachment"
+            },
+            "name": "Name",
+            "file": "File",
+            "article": "Article"
+        }
+    }
+}

@@ -58,6 +58,42 @@ export class Header extends React.Component<IHeaderProps, { menuOpen: boolean }>
   render() {
     const { currentLocale, isAuthenticated } = this.props;
     const entityMenuItems = [
+      (
+        <DropdownItem tag={Link} key="station" to="/station">
+          <FaAsterisk />&nbsp;
+          Station
+        </DropdownItem>
+      ),
+      (
+        <DropdownItem tag={Link} key="engine" to="/engine">
+          <FaAsterisk />&nbsp;
+          Engine
+        </DropdownItem>
+      ),
+      (
+        <DropdownItem tag={Link} key="attachment" to="/attachment">
+          <FaAsterisk />&nbsp;
+          Attachment
+        </DropdownItem>
+      ),
+      (
+        <DropdownItem tag={Link} key="article" to="/article">
+          <FaAsterisk />&nbsp;
+          Article
+        </DropdownItem>
+      ),
+      (
+        <DropdownItem tag={Link} key="tag" to="/tag">
+          <FaAsterisk />&nbsp;
+          Tag
+        </DropdownItem>
+      ),
+      (
+        <DropdownItem tag={Link} key="changelog" to="/changelog">
+          <FaAsterisk />&nbsp;
+          Changelog
+        </DropdownItem>
+      ),
       /* jhipster-needle-add-entity-to-menu - - JHipster will add entities to the menu here */
       <span key="dummy-placeholder"/> /* workaround to avoid error when there are no entities */
     ];
