@@ -198,7 +198,7 @@ b.	Assembled a multidisciplinary and collaborative team that includes, at a mini
 c.	Understood what people needed by including people in the prototype development and design process | Involved users: Design of KMT, User Stories, Sprint Reviews, User Testing, and an iterative development process.
 d.	Used at least a minimum of three (3) user-centric design techniques and/or tools | Used story boards, prototype testing, and an iterative process to interact with the firefighters (users).
 e.	Used GitHub to document code commits | DH Synergetech used the following GitHub repository: Dhsynergetech / kmt
-f.	Used Swagger to document the RESTful API, and provided a link to the Swagger API | Run time RESTful APIs were published in Swagger 
+f.	Used Swagger to document the RESTful API, and provided a link to the Swagger API | Restful APIs for the DHS Knowledge Management tool are in Swagger at: https://dhsknowledgemanagement.cfapps.io/#/admin/docs 
 g.	Complied with Section 508 of the Americans with Disabilities Act and WCAG 2.0 | INSERT RESPONSE
 h.	Created or used a design style guide and/or pattern library | Used jHipster framework with Reactive code.
 i.	Performed usability tests with people | The Product Manager is a former firefighter who performed testing and facilitated user testing with the other firefighters.
