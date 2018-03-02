@@ -16,4 +16,4 @@ Chico Police Department | 530.897.4900 | 411 Main Street; Chico, CA 95928
 US Forest Service | 530.534.6500 | 875 Mitchell Ave; Oroville, CA 95965
 
 ## Lessons Learned
-* [Pulga Incident] (https://github.com/dhsynergetech/kmt/Lessons Learned - Pulga Incident.docx)
+* [Pulga Incident] (https://github.com/dhsynergetech/kmt/blob/master/LessonsLearnedPulgaIncident.md)
