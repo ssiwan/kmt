@@ -204,8 +204,8 @@ h.	Created or used a design style guide and/or pattern library | Used jHipster f
 i.	Performed usability tests with people | The Product Manager is a former firefighter who performed testing and facilitated user testing with the other firefighters.
 j.	Used an iterative approach, where feedback informed subsequent work or versions of the prototype | The DHSynergetech KMT was developed in two iterations (sprints) and reviewed by users during each sprint review.
 k.	Created a prototype that works on multiple devices, and presents a responsive design | INSERT RESPONSE
-l.	Used at least five (5) modern and open-source technologies, regardless of architectural layer (frontend, backend, etc.) | INSERT RESPONSE
-m.	Deployed the prototype on an Infrastructure as a Service (IaaS) or Platform as Service (PaaS) provider, and indicated which provider they used | INSERT RESPONSE
+l.	Used at least five (5) modern and open-source technologies, regardless of architectural layer (frontend, backend, etc.) | The 5 modern and open-source technologies used in the DHSynergetech KMT are: 1.	Pivotal Cloud Foundry (Pivotal.io); 2.	JHipster development platform (jhipster.tech); 3.	React javascript library for user interfaces (reactjs.org); 4.	ClearDB database (cleardb.net); and 5.	 GitHub source code management and collaboration tools (github.com)
+m.	Deployed the prototype on an Infrastructure as a Service (IaaS) or Platform as Service (PaaS) provider, and indicated which provider they used | The DHSynergetech KMT was deployed on Pivotal.io: ![Pivotal] (
 n.	Developed automated unit tests for their code | INSERT RESPONSE
 o.	Setup or used a continuous integration system to automate the running of tests and continuously deployed their code to their IaaS or PaaS provider | INSERT RESPONSE
 p.	Setup or used configuration management | INSERT RESPONSE
