@@ -1,6 +1,6 @@
 # Station 23 – Forest Ranch
 
-[Forest Ranch Image] 
+![Forest Ranch Image](https://github.com/dhsynergetech/kmt/blob/master/cal-fire-butte-county-fire-station-24.png)
 
 ## Internet Information
 http://calfire.ca.gov/contacts/station?SID=650
@@ -16,4 +16,4 @@ Chico Police Department | 530.897.4900 | 411 Main Street; Chico, CA 95928
 US Forest Service | 530.534.6500 | 875 Mitchell Ave; Oroville, CA 95965
 
 ## Lessons Learned
-* [Pulga Incident] (kmt/Lessons Learned - Pulga Incident.docx)
+* [Pulga Incident] (https://github.com/dhsynergetech/kmt/Lessons Learned - Pulga Incident.docx)
