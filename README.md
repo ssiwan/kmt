@@ -208,8 +208,8 @@ l.	Used at least five (5) modern and open-source technologies, regardless of arc
 m.	Deployed the prototype on an Infrastructure as a Service (IaaS) or Platform as Service (PaaS) provider, and indicated which provider they used | The DHSynergetech KMT was deployed on Pivotal.io: ![Pivotal](https://github.com/dhsynergetech/kmt/blob/master/pivotalio.png)
 n.	Developed automated unit tests for their code | INSERT RESPONSE
 o.	Setup or used a continuous integration system to automate the running of tests and continuously deployed their code to their IaaS or PaaS provider | INSERT RESPONSE
-p.	Setup or used configuration management | INSERT RESPONSE
-q.	Setup or used continuous monitoring | INSERT RESPONSE
+p.	Setup or used configuration management | Used GitHub configuration management: ![GitHub](https://github.com/dhsynergetech/kmt/blob/master/GitHub.png)
+q.	Setup or used continuous monitoring | Used PCF Metrics (pivotal.io) for continuous monitoring of the DHS Knowledge Management application: ![PCF Metrics](https://github.com/dhsynergetech/kmt/blob/master/PCFMetrics.png)
 r.	Deployed their software in an open source container, such as Docker (i.e., utilized operating-system-level virtualization) | INSERT RESPONSE
 s.	Provided sufficient documentation to install and run their prototype on another machine; and | INSERT RESPONSE
 t.	Prototype and underlying platforms used to create and run the prototype are openly licensed and free of charge | INSERT RESPONSE
