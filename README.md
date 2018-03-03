@@ -146,6 +146,9 @@ Then navigate to [http://localhost:8080](http://localhost:8080) in your browser.
 
 ## Testing
 
+*US Digital Service Playbook*
+>Play 10 - Automate Testing and Deployments
+
 To launch your application's tests, run:
 
     ./mvnw clean test
@@ -156,7 +159,12 @@ Unit tests are run by [Karma][] and written with [Jasmine][]. They're located in
 
     yarn test
 
+### Security Testing
 
+*US Digital Service Playbook*
+> Play 11 - Manage Security and Privacy through Reusable Processes
+
+**ToDo: Describe
 
 For more information, refer to the [Running tests page][].
 
@@ -234,6 +242,10 @@ The DH Synergetech consultants began the scrum process on 2/22/18 with Sprint pl
 The DH Synergetech consultants began daily 15 minute scrum calls on 2/23/18, with a plan to conduct two 1 (one) week sprints for the RFI.  Plan is to conduct sprint review's with firefighters to obtain feedback on the CalFire Magnet Board KMT tool. Daily collaboration for the team is enhanced via a Slack channel at https://dhsynergetech.slack.com/?redir=%2Fhome
 
 ### Sprint Reviews and Retrospectives
+
+*US Digital Service Playbook*
+> Play 12 - Use Data to Drive Decisions
+
 **ToDo: Insert information from sprint reviews and retrospectives here.
 
 ### Technical Approach Requirements
