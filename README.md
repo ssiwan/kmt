@@ -1,23 +1,51 @@
-# Knowledge Management Tool
+# Technical Approach - DHS Knowledge Management Tool
+
+## DHSKnowledgeManagement
+A prototype of the DHSKnowledgeManagement tool is located at: https://dhsknowledgemanagement.cfapps.io
+
+## Architectural Description / Code Flow
+
+**ToDo: Sabu - Please provide architectural description / Code Flow here.
+
 ## Features
 ### Knowledge Creation
 - Requirement 1: Have the ability to easily create “knowledge articles” (KAs).
 - These can be original records (e.g., specific work instructions or content) and/or packages of content, including documents, user-configurable forms, tables, and workflows
+
+**ToDo: Jacob or Brendon - Describe how firefighters can create knowledge articles here.
+
 - Requirement 2: Have the ability to provide multiple levels and formats of information in KAs (e.g., bullet points for senior technical levels, scripted specific details for junior/non-technical staff)
+
+**ToDo: Jacob or Brendon - Describe how DHS KMT does this.
+
 - Requirement 3: Allow for role-based security access, to allow control of access and level of information by login
+
+**ToDo: Jacob or Brendon - Describe.
+
 ### Knowledge Sharing
 - Requirement 4: Allow for the promotion of process and information across systems and channels, as required
+
+**ToDo: Describe.
+
 - Requirement 5: Have the ability to create user-defined rules for creation (e.g., mandatory fields) and lifecycle management (e.g., who, how, when revised and updated)
+
+**ToDo: Describe.
+
 - Requirement 6: Trigger escalation processes (e.g., automated emails/texts to approvers, reminders) for lifecycle activities
 revised and updated)
+
+**ToDo: Describe.
+
 ### Knowledge Development
 - Requirement 7: Have the ability to update and improve KAs and access the value of usage as input to predicting new records or record types
+
+**ToDo: Describe.
+
 - Requirement 8: Show innovation by learning from existing records (e.g., types, content, usage) and prompting to create new KAs
 
+**ToDo: Describe.
 
-# DHSKnowledgeManagement
-
-## Development
+## DHSKnowledgeManagement Development / How-To's
 
 Before you can build this project, you must install and configure the following dependencies on your machine:
 
@@ -179,18 +207,23 @@ To configure CI for your project, run the ci-cd sub-generator (`jhipster ci-cd`)
 [Protractor]: https://angular.github.io/protractor/
 [Leaflet]: http://leafletjs.com/
 [DefinitelyTyped]: http://definitelytyped.org/
-# Agile Methodology
-## User Involvement in Design
+
+## DHS Agile Methodology
+### User Involvement in Design
 On 2/21/18, DH Synergetech consultants interviewed users (firefighters) in person at the Butte County CalFire Emergency Command Center to identify a useful application for a Knowledge Management Tool (KMT) that would provide value to CalFire. The firefighters suggested a KMT that mimics the functionality of the “Magnet Board” used to model the firefighting resources available to the county for incident response.  Currently the magnet board is a physical board located in the Command Center.  The goal of the Magnet Board KMT would be to represent the information represented in this magnet board in electronic format, viewable from any location in a responsive format.  Underlying the Magnet Board is new functionality for a Knowledge Management Tool for the fire stations, engines, and other associated firefighting equipment.   
 ![Image of Magnet Board](https://github.com/dhsynergetech/kmt/blob/master/MagnetBoard.png)
 Initial mockups based on the Magnet Board were developed and shared with development team in GitHub https://github.com/dhsynergetech/kmt/blob/master/CalFire%20Mockups%20v2.docx
-## Sprint Planning
+
+### Sprint Planning
 The DH Synergetech consultants began the scrum process on 2/22/18 with Sprint planning session to review draft user stories based on the interview with firefighters as well as requirements in the RFI.  User stories were developed, documented, and prioritized in the Kanban board in GitHub at https://github.com/dhsynergetech/kmt/projects/1
-## Daily Scrum
+
+### Daily Scrum
 The DH Synergetech consultants began daily 15 minute scrum calls on 2/23/18, with a plan to conduct two 1 (one) week sprints for the RFI.  Plan is to conduct sprint review's with firefighters to obtain feedback on the CalFire Magnet Board KMT tool. Daily collaboration for the team is enhanced via a Slack channel at https://dhsynergetech.slack.com/?redir=%2Fhome
-## Sprint Reviews and Retrospectives
+
+### Sprint Reviews and Retrospectives
 Insert information from sprint reviews and retrospectives here.
-## Digital Services Playbook Requirements
+
+### Digital Services Playbook Requirements
 Requirement | DH Synergetech Approach
 -------------------- | --------------------
 a.	Assigned one (1) leader and gave that person authority and responsibility and held that person accountable for the quality of the prototype submitted | Assigned Brendon Delong as Delivery Manager responsible for the prototype.
