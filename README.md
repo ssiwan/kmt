@@ -212,6 +212,7 @@ To configure CI for your project, run the ci-cd sub-generator (`jhipster ci-cd`)
 ### User Involvement in Design
 *US Digital Service Playbook*
 > Play 1 - Understand What People Need
+
 > Play 2 - Address the Whole Experience from Start to Finish
 
 On 2/21/18, DH Synergetech consultants interviewed users (firefighters) in person at the Butte County CalFire Emergency Command Center to identify a useful application for a Knowledge Management Tool (KMT) that would provide value to CalFire. The firefighters suggested a KMT that mimics the functionality of the “Magnet Board” used to model the firefighting resources available to the county for incident response.  Currently the magnet board is a physical board located in the Command Center.  The goal of the Magnet Board KMT would be to represent the information represented in this magnet board in electronic format, viewable from any location in a responsive format.  Underlying the Magnet Board is new functionality for a Knowledge Management Tool for the fire stations, engines, and other associated firefighting equipment.   
