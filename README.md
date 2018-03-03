@@ -237,6 +237,21 @@ The DH Synergetech consultants began daily 15 minute scrum calls on 2/23/18, wit
 **ToDo: Insert information from sprint reviews and retrospectives here.
 
 ### Technical Approach Requirements
+
+*US Digital Service Playbook*
+> Play 5 - Structure Budgets and Contracts to Support Delivery (Requirement a.)
+
+> Play 6 - Assign One Leader and Hold that Person Accountable (Requirement a.)
+
+> Play 7 - Bring in Experienced Teams (Requirement b.)
+
+> Play 8 - Choose a Modern Technology Stack (Requirement l.)
+
+> Play 9 - Deploy in a Flexible Hosting Environment (Requirement m.)
+
+> Play 13 - Default to open (Requirement t.)
+
+
 Requirement | DH Synergetech Approach
 -------------------- | --------------------
 a.	Assigned one (1) leader and gave that person authority and responsibility and held that person accountable for the quality of the prototype submitted | Assigned Brendon Delong as Delivery Manager responsible for the prototype.
