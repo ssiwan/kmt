@@ -146,8 +146,8 @@ Then navigate to [http://localhost:8080](http://localhost:8080) in your browser.
 
 ## Testing
 
-*US Digital Service Playbook*
->Play 10 - Automate Testing and Deployments
+*US Digital Service Playbook:*
+> *Play 10 - Automate Testing and Deployments*
 
 To launch your application's tests, run:
 
@@ -161,8 +161,8 @@ Unit tests are run by [Karma][] and written with [Jasmine][]. They're located in
 
 ### Security Testing
 
-*US Digital Service Playbook*
-> Play 11 - Manage Security and Privacy through Reusable Processes
+*US Digital Service Playbook:*
+> *Play 11 - Manage Security and Privacy through Reusable Processes*
 
 **ToDo: Describe
 
@@ -218,23 +218,23 @@ To configure CI for your project, run the ci-cd sub-generator (`jhipster ci-cd`)
 
 ## DHS Agile Methodology
 ### User Involvement in Design
-*US Digital Service Playbook*
-> Play 1 - Understand What People Need
+*US Digital Service Playbook:*
+> *Play 1 - Understand What People Need*
 
-> Play 2 - Address the Whole Experience from Start to Finish
+> *Play 2 - Address the Whole Experience from Start to Finish*
 
 On 2/21/18, DH Synergetech consultants interviewed users (firefighters) in person at the Butte County CalFire Emergency Command Center to identify a useful application for a Knowledge Management Tool (KMT) that would provide value to CalFire. The firefighters suggested a KMT that mimics the functionality of the “Magnet Board” used to model the firefighting resources available to the county for incident response.  Currently the magnet board is a physical board located in the Command Center.  The goal of the Magnet Board KMT would be to represent the information represented in this magnet board in electronic format, viewable from any location in a responsive format.  Underlying the Magnet Board is new functionality for a Knowledge Management Tool for the fire stations, engines, and other associated firefighting equipment.   
 ![Image of Magnet Board](https://github.com/dhsynergetech/kmt/blob/master/MagnetBoard.png)
 
-*US Digital Service Playbook*
-> Play 3 - Make it Simple and Intuitive
+*US Digital Service Playbook:*
+> *Play 3 - Make it Simple and Intuitive*
 
 Initial mockups based on the Magnet Board were developed and shared with development team in GitHub https://github.com/dhsynergetech/kmt/blob/master/CalFire%20Mockups%20v2.docx
 
 ### Sprint Planning
 
-*US Digital Service Playbook*
-> Play 4 - Build the Service Using Agile and Iterative Practices
+*US Digital Service Playbook:*
+> *Play 4 - Build the Service Using Agile and Iterative Practices*
 
 The DH Synergetech consultants began the scrum process on 2/22/18 with Sprint planning session to review draft user stories based on the interview with firefighters as well as requirements in the RFI.  User stories were developed, documented, and prioritized in the Kanban board in GitHub at https://github.com/dhsynergetech/kmt/projects/1
 
@@ -243,25 +243,25 @@ The DH Synergetech consultants began daily 15 minute scrum calls on 2/23/18, wit
 
 ### Sprint Reviews and Retrospectives
 
-*US Digital Service Playbook*
-> Play 12 - Use Data to Drive Decisions
+*US Digital Service Playbook:*
+> *Play 12 - Use Data to Drive Decisions*
 
 **ToDo: Insert information from sprint reviews and retrospectives here.
 
 ### Technical Approach Requirements
 
-*US Digital Service Playbook*
-> Play 5 - Structure Budgets and Contracts to Support Delivery (Requirement a.)
+*US Digital Service Playbook:*
+> *Play 5 - Structure Budgets and Contracts to Support Delivery (see Requirement a.)*
 
-> Play 6 - Assign One Leader and Hold that Person Accountable (Requirement a.)
+> *Play 6 - Assign One Leader and Hold that Person Accountable (see Requirement a.)*
 
-> Play 7 - Bring in Experienced Teams (Requirement b.)
+> *Play 7 - Bring in Experienced Teams (see Requirement b.)*
 
-> Play 8 - Choose a Modern Technology Stack (Requirement l.)
+> *Play 8 - Choose a Modern Technology Stack (see Requirement l.)*
 
-> Play 9 - Deploy in a Flexible Hosting Environment (Requirement m.)
+> *Play 9 - Deploy in a Flexible Hosting Environment (see Requirement m.)*
 
-> Play 13 - Default to open (Requirement t.)
+> *Play 13 - Default to open (see Requirement t.)*
 
 
 Requirement | DH Synergetech Approach
