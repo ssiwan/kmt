@@ -1,7 +1,7 @@
 # Technical Approach - DHS Knowledge Management Tool
 
 ## DHSKnowledgeManagement
-A prototype of the DHSKnowledgeManagement tool is located at: https://dhsknowledgemanagement.cfapps.io
+A prototype of the DHS Knowledge Management Tool (KMT) is located at: https://dhsknowledgemanagement.cfapps.io
 
 ## Architectural Description / Code Flow
 
@@ -25,7 +25,7 @@ A prototype of the DHSKnowledgeManagement tool is located at: https://dhsknowled
 ### Knowledge Sharing
 - Requirement 4: Allow for the promotion of process and information across systems and channels, as required
 
-**ToDo: Describe.
+The DHS KMT is built with RESTful APIs, for integration with any application.  Using the RESTful APIs, other applications can call on web services from the KMT.  For example, another web application may get knowledge article information from the KMT to display on its web page.  This architecture supports the promotion of process and information across systems and channels as required.    
 
 - Requirement 5: Have the ability to create user-defined rules for creation (e.g., mandatory fields) and lifecycle management (e.g., who, how, when revised and updated)
 
