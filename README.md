@@ -246,7 +246,7 @@ The DH Synergetech consultants began daily 15 minute scrum calls on 2/23/18, wit
 *US Digital Service Playbook:*
 > *Play 12 - Use Data to Drive Decisions*
 
-**ToDo: Insert information from sprint reviews and retrospectives here.
+A sprint review and retrospective was conducted on 3/7/2018 where the Kanban board from sprint 1 was reviewed.  Stories were reviewed with demonstrations of the KMT prototype and further development items were discussed.  Items that were completed were moved to the Done column on the Kanban board and remaining items in the product backlog were discussed.  Stories for the next sprint were identified and moved to the In Progress column.  Retrospective discussion was conducted and changes in our approach for next sprint were identified (for example, changing from ReactJS to AngularJS in the next build).  Product Manager started developing plan to review with firefighter users in next few days after new build.
 
 ### Technical Approach Requirements
 
