@@ -1,0 +1,57 @@
+<form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+
+    <div class="modal-header">
+        <h4 class="modal-title" id="myEngineLabel" jhiTranslate="dhsKnowledgeManagementApp.engine.home.createOrEditLabel">Create or edit a Engine</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                (click)="clear()">&times;</button>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" [hidden]="!engine.id">
+            <label for="id" jhiTranslate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                   [(ngModel)]="engine.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="dhsKnowledgeManagementApp.engine.number" for="field_number">Number</label>
+            <input type="text" class="form-control" name="number" id="field_number"
+                [(ngModel)]="engine.number" required/>
+            <div [hidden]="!(editForm.controls.number?.dirty && editForm.controls.number?.invalid)">
+                <small class="form-text text-danger"
+                   [hidden]="!editForm.controls.number?.errors?.required" jhiTranslate="entity.validation.required">
+                   This field is required.
+                </small>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="dhsKnowledgeManagementApp.engine.status" for="field_status">Status</label>
+            <select class="form-control" name="status" [(ngModel)]="engine.status" id="field_status"  required>
+                <option value="READY">{{'dhsKnowledgeManagementApp.EngineStatus.READY' | translate}}</option>
+                <option value="UNSTAFFED">{{'dhsKnowledgeManagementApp.EngineStatus.UNSTAFFED' | translate}}</option>
+                <option value="OUTOFSERVICE">{{'dhsKnowledgeManagementApp.EngineStatus.OUTOFSERVICE' | translate}}</option>
+                <option value="INTRANSIT">{{'dhsKnowledgeManagementApp.EngineStatus.INTRANSIT' | translate}}</option>
+            </select>
+            <div [hidden]="!(editForm.controls.status?.dirty && editForm.controls.status?.invalid)">
+                <small class="form-text text-danger"
+                   [hidden]="!editForm.controls.status?.errors?.required" jhiTranslate="entity.validation.required">
+                   This field is required.
+                </small>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label jhiTranslate="dhsKnowledgeManagementApp.engine.article" for="field_article">Article</label>
+            <select class="form-control" id="field_article" multiple name="article" [(ngModel)]="engine.articles">
+                <option [ngValue]="getSelected(engine.articles, articleOption)" *ngFor="let articleOption of articles; trackBy: trackArticleById">{{articleOption.title}}</option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="clear()">
+            <span class="fa fa-ban"></span>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+            <span class="fa fa-save"></span>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

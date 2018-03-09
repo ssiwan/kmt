@@ -1,0 +1,30 @@
+
+<div *ngIf="changelog">
+    <h2><span jhiTranslate="dhsKnowledgeManagementApp.changelog.detail.title">Changelog</span> {{changelog.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="dhsKnowledgeManagementApp.changelog.modified">Modified</span></dt>
+        <dd>
+            <span>{{changelog.modified | date:'medium'}}</span>
+        </dd>
+        <dt><span jhiTranslate="dhsKnowledgeManagementApp.changelog.user">User</span></dt>
+        <dd>
+            {{changelog.userLogin}}
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'changelog/'+ changelog.id + '/edit'} }]"
+            replaceUrl="true"
+            queryParamsHandling="merge"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

@@ -1,0 +1,63 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityRelationshipName": "article",
+            "relationshipName": "tag",
+            "otherEntityName": "tag",
+            "otherEntityField": "name",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityRelationshipName": "article",
+            "relationshipName": "changelog",
+            "otherEntityName": "changelog",
+            "otherEntityField": "modified",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "many-to-many",
+            "relationshipName": "station",
+            "otherEntityName": "station",
+            "ownerSide": false,
+            "otherEntityRelationshipName": "article"
+        },
+        {
+            "relationshipType": "many-to-many",
+            "relationshipName": "engine",
+            "otherEntityName": "engine",
+            "ownerSide": false,
+            "otherEntityRelationshipName": "article"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "title",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "content",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "text",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "ArticleStatus",
+            "fieldValues": "DRAFT,APPROVED"
+        }
+    ],
+    "changelogDate": "20180309165256",
+    "entityTableName": "article",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": false
+}

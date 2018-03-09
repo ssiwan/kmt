@@ -1,0 +1,9 @@
+{
+    "dhsKnowledgeManagementApp": {
+        "ArticleStatus" : {
+            "null": "",
+            "DRAFT": "DRAFT",
+            "APPROVED": "APPROVED"
+        }
+    }
+}

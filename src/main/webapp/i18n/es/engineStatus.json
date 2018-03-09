@@ -1,0 +1,11 @@
+{
+    "dhsKnowledgeManagementApp": {
+        "EngineStatus" : {
+            "null": "",
+            "READY": "READY",
+            "UNSTAFFED": "UNSTAFFED",
+            "OUTOFSERVICE": "OUTOFSERVICE",
+            "INTRANSIT": "INTRANSIT"
+        }
+    }
+}
