@@ -2,11 +2,11 @@
 
 entity Station (station) {
   name String required,
-  county String
+  county String required
 }
 entity Engine (engine) {
   number String required,
-  status EngineStatus
+  status EngineStatus required
 }
 entity Changelog (changelog) {
   modified Instant
@@ -14,14 +14,13 @@ entity Changelog (changelog) {
 entity Tag (tag) {
   name String
 }
-entity Attachment (attachment) {
-  name String,
-  file AnyBlob
-}
+#entity Attachment (attachment) {
+#  name String,
+#  file AnyBlob
+#}
 entity Article (article) {
   title String required,
-  detail TextBlob,
-  preview String,
+  content TextBlob required,
   status ArticleStatus
 }
 
@@ -41,13 +40,13 @@ relationship ManyToOne {
   Changelog{user(login)} to User
 }
 relationship ManyToMany {
-  Article{attachment(name)} to Attachment{article},
+#  Article{attachment(name)} to Attachment{article},
   Article{tag(name)} to Tag{article},
-  Article{station(name)} to Station{article},
-  Article{engine(number)} to Engine{article},
-  Article{changelog} to Changelog{article}
+  Station{article(title)} to Article{station},
+  Engine{article(title)} to Article{engine},
+  Article{changelog(modified)} to Changelog{article}
 }
 
-dto Station, Engine, Changelog, Tag, Attachment, Article with mapstruct
-paginate Station, Engine, Changelog, Tag, Attachment, Article with pagination
-service Station, Engine, Changelog, Tag, Attachment, Article with serviceClass
+dto Station, Engine, Changelog, Tag, Article with mapstruct
+paginate Station, Engine, Changelog, Tag, Article with pagination
+service Station, Engine, Changelog, Tag, Article with serviceClass
