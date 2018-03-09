@@ -1,0 +1,53 @@
+// JDL definition for application 'DHSKnowledgeManagement' generated with command 'jhipster export-jdl'
+
+entity Station (station) {
+  name String required,
+  county String
+}
+entity Engine (engine) {
+  number String required,
+  status EngineStatus
+}
+entity Changelog (changelog) {
+  modified Instant
+}
+entity Tag (tag) {
+  name String
+}
+entity Attachment (attachment) {
+  name String,
+  file AnyBlob
+}
+entity Article (article) {
+  title String required,
+  detail TextBlob,
+  preview String,
+  status ArticleStatus
+}
+
+enum EngineStatus {
+  READY,
+  UNSTAFFED,
+  OUTOFSERVICE,
+  INTRANSIT
+}
+
+enum ArticleStatus {
+  DRAFT,
+  APPROVED
+}
+
+relationship ManyToOne {
+  Changelog{user(login)} to User
+}
+relationship ManyToMany {
+  Article{attachment(name)} to Attachment{article},
+  Article{tag(name)} to Tag{article},
+  Article{station(name)} to Station{article},
+  Article{engine(number)} to Engine{article},
+  Article{changelog} to Changelog{article}
+}
+
+dto Station, Engine, Changelog, Tag, Attachment, Article with mapstruct
+paginate Station, Engine, Changelog, Tag, Attachment, Article with pagination
+service Station, Engine, Changelog, Tag, Attachment, Article with serviceClass
