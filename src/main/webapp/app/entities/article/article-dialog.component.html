@@ -38,7 +38,7 @@
             <label class="form-control-label" jhiTranslate="dhsKnowledgeManagementApp.article.preview" for="field_content">Preview</label>
             <markdown [data]="article.content"></markdown>    
         </div>        
-        <div class="form-group">
+        <div *jhiHasAnyAuthority="['ROLE_CAPTAIN']" class="form-group">
             <label class="form-control-label" jhiTranslate="dhsKnowledgeManagementApp.article.status" for="field_status">Status</label>
             <select class="form-control" name="status" [(ngModel)]="article.status" id="field_status" >
                 <option value="DRAFT">{{'dhsKnowledgeManagementApp.ArticleStatus.DRAFT' | translate}}</option>
