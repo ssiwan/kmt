@@ -62,7 +62,9 @@ The DHS KMT is built with RESTful APIs published in Swagger, for integration wit
 
 - **Requirement 5: Have the ability to create user-defined rules for creation (e.g., mandatory fields) and lifecycle management (e.g., who, how, when revised and updated)**
 
-**ToDo: Describe.
+Administrators can assign roles for creation and lifecycle management using User Management features in KMT.
+
+![](https://github.com/dhsynergetech/kmt/blob/master/DHSKMTUserAdmin.png)
 
 - **Requirement 6: Trigger escalation processes (e.g., automated emails/texts to approvers, reminders) for lifecycle activities
 revised and updated)**
