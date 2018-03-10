@@ -13,7 +13,7 @@ A prototype of the DHS Knowledge Management Tool (KMT) is located at: https://dh
 - These can be original records (e.g., specific work instructions or content) and/or packages of content, including documents, user-configurable forms, tables, and workflows
 
 To Create Knowledge Article, user first needs to “Register a new account”.
-![](https://github.com/dhsynergetech/kmt/DHSKMTHomePage.png)
+![](https://github.com/dhsynergetech/kmt/blob/master/DHSKMTHomePage.png)
 
 User then needs to fill in the required fields to Register.
 ![](https://github.com/dhsynergetech/kmt/blob/master/DHSKMTRegistrationPage.png)
