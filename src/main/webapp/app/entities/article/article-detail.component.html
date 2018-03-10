@@ -26,7 +26,7 @@
         <dt><span jhiTranslate="dhsKnowledgeManagementApp.article.changelog">Changelog</span></dt>
         <dd>
             <span *ngFor="let changelog of article.changelogs; let last = last">
-                <a [routerLink]="['/changelog', changelog?.id ]">{{changelog.modified}}</a>{{last ? '' : ', '}}
+                <a [routerLink]="['/changelog', changelog?.id ]">{{changelog.modified}}  {{changelog.userLogin}}</a><br/>
             </span>
         </dd>
     </dl>
