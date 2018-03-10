@@ -23,7 +23,7 @@ Once user is registered for an account, they must Sign in to access the KMT.
 
 ![](https://github.com/dhsynergetech/kmt/blob/master/DHSKMTSignIn.png)
 
-After the user is signed in, user can select Knowledge Article under Entities.
+After the user is signed in, user can select Article under Entities.
 
 ![](https://github.com/dhsynergetech/kmt/blob/master/DHSKMTEntitiesKnowledgeArticle.png)
 
