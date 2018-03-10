@@ -9,7 +9,7 @@ A prototype of the DHS Knowledge Management Tool (KMT) is located at: https://dh
 
 ## Features
 ### Knowledge Creation
-- **Requirement 1: Have the ability to easily create “knowledge articles” (KAs).**
+#### **Requirement 1: Have the ability to easily create “knowledge articles” (KAs).**
 - These can be original records (e.g., specific work instructions or content) and/or packages of content, including documents, user-configurable forms, tables, and workflows
 
 To Create Knowledge Article, user first needs to “Register a new account”.
@@ -43,40 +43,40 @@ Knowledge Article has been created.
 
 ![](https://github.com/dhsynergetech/kmt/blob/master/DHSKMTArticlesMenu.png)
 
-- **Requirement 2: Have the ability to provide multiple levels and formats of information in KAs (e.g., bullet points for senior technical levels, scripted specific details for junior/non-technical staff)**
+#### **Requirement 2: Have the ability to provide multiple levels and formats of information in KAs (e.g., bullet points for senior technical levels, scripted specific details for junior/non-technical staff)**
 
 **ToDo: Jacob or Brendon - Describe how DHS KMT does this.
 
-- **Requirement 3: Allow for role-based security access, to allow control of access and level of information by login**
+#### **Requirement 3: Allow for role-based security access, to allow control of access and level of information by login**
 
 Only users with Captain role can approve Knowledge Articles by selecting Status of Approved.  Users with Firefighter role can create Knowledge Articles but not approve.
 
 ![](https://github.com/dhsynergetech/kmt/blob/master/DHSKMTArticleApproval.png)
 
 ### Knowledge Sharing
-- **Requirement 4: Allow for the promotion of process and information across systems and channels, as required.**
+#### **Requirement 4: Allow for the promotion of process and information across systems and channels, as required.**
 
 The DHS KMT is built with RESTful APIs published in Swagger, for integration with any application.  Using the RESTful APIs, other applications can call on web services from the KMT.  For example, another web application may get knowledge article information from the KMT to display on its web page.  This architecture supports the promotion of process and information across systems and channels as required. 
 
 ![](https://github.com/dhsynergetech/kmt/blob/master/SwaggerAPIs.png)
 
-- **Requirement 5: Have the ability to create user-defined rules for creation (e.g., mandatory fields) and lifecycle management (e.g., who, how, when revised and updated)**
+#### **Requirement 5: Have the ability to create user-defined rules for creation (e.g., mandatory fields) and lifecycle management (e.g., who, how, when revised and updated)**
 
 Administrators can assign roles for creation and lifecycle management using User Management features in KMT.
 
 ![](https://github.com/dhsynergetech/kmt/blob/master/DHSKMTUserAdmin.png)
 
-- **Requirement 6: Trigger escalation processes (e.g., automated emails/texts to approvers, reminders) for lifecycle activities
+#### **Requirement 6: Trigger escalation processes (e.g., automated emails/texts to approvers, reminders) for lifecycle activities
 revised and updated)**
 
 **ToDo: Describe.
 
 ### Knowledge Development
-- **Requirement 7: Have the ability to update and improve KAs and access the value of usage as input to predicting new records or record types**
+#### **Requirement 7: Have the ability to update and improve KAs and access the value of usage as input to predicting new records or record types**
 
 **ToDo: Describe.
 
-- **Requirement 8: Show innovation by learning from existing records (e.g., types, content, usage) and prompting to create new KAs.**
+#### **Requirement 8: Show innovation by learning from existing records (e.g., types, content, usage) and prompting to create new KAs.**
 
 **ToDo: Describe.
 
