@@ -13,35 +13,35 @@ A prototype of the DHS Knowledge Management Tool (KMT) is located at: https://dh
 - These can be original records (e.g., specific work instructions or content) and/or packages of content, including documents, user-configurable forms, tables, and workflows
 
 To Create Knowledge Article, user first needs to “Register a new account”.
-![] (https://raw.githubusercontent.com/dhsynergetech/kmt/DHSKMTHomePage.png)
+![](https://github.com/dhsynergetech/kmt/DHSKMTHomePage.png)
 
 User then needs to fill in the required fields to Register.
-![] (https://github.com/dhsynergetech/kmt/blob/master/DHSKMTRegistrationPage.png)
+![](https://github.com/dhsynergetech/kmt/blob/master/DHSKMTRegistrationPage.png)
 
 User will be sent a confirmation email with confirmation link that must be selected to activate the account.
 Once user is registered for an account, they must Sign in to access the KMT.
 
-![] (https://github.com/dhsynergetech/kmt/blob/master/DHSKMTSignIn.png)
+![](https://github.com/dhsynergetech/kmt/blob/master/DHSKMTSignIn.png)
 
 After the user is signed in, user can select Knowledge Article under Entities.
 
-![] (https://github.com/dhsynergetech/kmt/blob/master/DHSKMTEntitiesKnowledgeArticle.png)
+![](https://github.com/dhsynergetech/kmt/blob/master/DHSKMTEntitiesKnowledgeArticle.png)
 
 After user clicks on article, they can select Create a new Article to create a Knowledge Article.
 
-![] (https://github.com/dhsynergetech/kmt/blob/master/DHSKMTCreateNewArticle.png)
+![](https://github.com/dhsynergetech/kmt/blob/master/DHSKMTCreateNewArticle.png)
 
 User can create an Article using Markdown in the Content Field and a Preview is automatically displayed of the Knowledge Article.
 
-![] (https://github.com/dhsynergetech/kmt/blob/master/DHSKMTArticlePreview.png)
+![](https://github.com/dhsynergetech/kmt/blob/master/DHSKMTArticlePreview.png)
 
 Once the Knowledge Article is complete, user selects save.
 
-![] (https://github.com/dhsynergetech/kmt/blob/master/DHSKMTArticleSave.png)
+![](https://github.com/dhsynergetech/kmt/blob/master/DHSKMTArticleSave.png)
 
 Knowledge Article has been created.
 
-![] (https://github.com/dhsynergetech/kmt/blob/master/DHSKMTArticlesMenu.png)
+![](https://github.com/dhsynergetech/kmt/blob/master/DHSKMTArticlesMenu.png)
 
 - **Requirement 2: Have the ability to provide multiple levels and formats of information in KAs (e.g., bullet points for senior technical levels, scripted specific details for junior/non-technical staff)**
 
@@ -51,12 +51,12 @@ Knowledge Article has been created.
 
 Only users with Captain role can approve Knowledge Articles by selecting Status of Approved.  Users with Firefighter role can create Knowledge Articles but not approve.
 
-![] (https://github.com/dhsynergetech/kmt/blob/master/DHSKMTArticleApproval.png)
+![](https://github.com/dhsynergetech/kmt/blob/master/DHSKMTArticleApproval.png)
 
 ### Knowledge Sharing
 - **Requirement 4: Allow for the promotion of process and information across systems and channels, as required.**
 
-The DHS KMT is built with RESTful APIs, for integration with any application.  Using the RESTful APIs, other applications can call on web services from the KMT.  For example, another web application may get knowledge article information from the KMT to display on its web page.  This architecture supports the promotion of process and information across systems and channels as required.    
+The DHS KMT is built with RESTful APIs published in Swagger, for integration with any application.  Using the RESTful APIs, other applications can call on web services from the KMT.  For example, another web application may get knowledge article information from the KMT to display on its web page.  This architecture supports the promotion of process and information across systems and channels as required.    
 
 - **Requirement 5: Have the ability to create user-defined rules for creation (e.g., mandatory fields) and lifecycle management (e.g., who, how, when revised and updated)**
 
