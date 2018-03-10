@@ -9,39 +9,70 @@ A prototype of the DHS Knowledge Management Tool (KMT) is located at: https://dh
 
 ## Features
 ### Knowledge Creation
-- Requirement 1: Have the ability to easily create “knowledge articles” (KAs).
+- **Requirement 1: Have the ability to easily create “knowledge articles” (KAs).**
 - These can be original records (e.g., specific work instructions or content) and/or packages of content, including documents, user-configurable forms, tables, and workflows
 
-**ToDo: Jacob or Brendon - Describe how firefighters can create knowledge articles here.
+To Create Knowledge Article, user first needs to “Register a new account”.
+![] (https://github.com/dhsynergetech/kmt/blob/master/DHSKMTHomePage.png)
 
-- Requirement 2: Have the ability to provide multiple levels and formats of information in KAs (e.g., bullet points for senior technical levels, scripted specific details for junior/non-technical staff)
+User then needs to fill in the required fields to Register.
+![] (https://github.com/dhsynergetech/kmt/blob/master/DHSKMTRegistrationPage.png)
+
+User will be sent a confirmation email with confirmation link that must be selected to activate the account.
+Once user is registered for an account, they must Sign in to access the KMT.
+
+![] (https://github.com/dhsynergetech/kmt/blob/master/DHSKMTSignIn.png)
+
+After the user is signed in, user can select Knowledge Article under Entities.
+
+![] (https://github.com/dhsynergetech/kmt/blob/master/DHSKMTEntitiesKnowledgeArticle.png)
+
+After user clicks on article, they can select Create a new Article to create a Knowledge Article.
+
+![] (https://github.com/dhsynergetech/kmt/blob/master/DHSKMTCreateNewArticle.png)
+
+User can create an Article using Markdown in the Content Field and a Preview is automatically displayed of the Knowledge Article.
+
+![] (https://github.com/dhsynergetech/kmt/blob/master/DHSKMTArticlePreview.png)
+
+Once the Knowledge Article is complete, user selects save.
+
+![] (https://github.com/dhsynergetech/kmt/blob/master/DHSKMTArticleSave.png)
+
+Knowledge Article has been created.
+
+![] (https://github.com/dhsynergetech/kmt/blob/master/DHSKMTArticlesMenu.png)
+
+- **Requirement 2: Have the ability to provide multiple levels and formats of information in KAs (e.g., bullet points for senior technical levels, scripted specific details for junior/non-technical staff)**
 
 **ToDo: Jacob or Brendon - Describe how DHS KMT does this.
 
-- Requirement 3: Allow for role-based security access, to allow control of access and level of information by login
+- **Requirement 3: Allow for role-based security access, to allow control of access and level of information by login**
 
-**ToDo: Jacob or Brendon - Describe.
+Only users with Captain role can approve Knowledge Articles by selecting Status of Approved.  Users with Firefighter role can create Knowledge Articles but not approve.
+
+![] (https://github.com/dhsynergetech/kmt/blob/master/DHSKMTArticleApproval.png)
 
 ### Knowledge Sharing
-- Requirement 4: Allow for the promotion of process and information across systems and channels, as required
+- **Requirement 4: Allow for the promotion of process and information across systems and channels, as required.**
 
 The DHS KMT is built with RESTful APIs, for integration with any application.  Using the RESTful APIs, other applications can call on web services from the KMT.  For example, another web application may get knowledge article information from the KMT to display on its web page.  This architecture supports the promotion of process and information across systems and channels as required.    
 
-- Requirement 5: Have the ability to create user-defined rules for creation (e.g., mandatory fields) and lifecycle management (e.g., who, how, when revised and updated)
+- **Requirement 5: Have the ability to create user-defined rules for creation (e.g., mandatory fields) and lifecycle management (e.g., who, how, when revised and updated)**
 
 **ToDo: Describe.
 
-- Requirement 6: Trigger escalation processes (e.g., automated emails/texts to approvers, reminders) for lifecycle activities
-revised and updated)
+- **Requirement 6: Trigger escalation processes (e.g., automated emails/texts to approvers, reminders) for lifecycle activities
+revised and updated)**
 
 **ToDo: Describe.
 
 ### Knowledge Development
-- Requirement 7: Have the ability to update and improve KAs and access the value of usage as input to predicting new records or record types
+- **Requirement 7: Have the ability to update and improve KAs and access the value of usage as input to predicting new records or record types**
 
 **ToDo: Describe.
 
-- Requirement 8: Show innovation by learning from existing records (e.g., types, content, usage) and prompting to create new KAs
+- **Requirement 8: Show innovation by learning from existing records (e.g., types, content, usage) and prompting to create new KAs.**
 
 **ToDo: Describe.
 
