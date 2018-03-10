@@ -56,7 +56,9 @@ Only users with Captain role can approve Knowledge Articles by selecting Status 
 ### Knowledge Sharing
 - **Requirement 4: Allow for the promotion of process and information across systems and channels, as required.**
 
-The DHS KMT is built with RESTful APIs published in Swagger, for integration with any application.  Using the RESTful APIs, other applications can call on web services from the KMT.  For example, another web application may get knowledge article information from the KMT to display on its web page.  This architecture supports the promotion of process and information across systems and channels as required.    
+The DHS KMT is built with RESTful APIs published in Swagger, for integration with any application.  Using the RESTful APIs, other applications can call on web services from the KMT.  For example, another web application may get knowledge article information from the KMT to display on its web page.  This architecture supports the promotion of process and information across systems and channels as required. 
+
+![](https://github.com/dhsynergetech/kmt/blob/master/SwaggerAPIs.png)
 
 - **Requirement 5: Have the ability to create user-defined rules for creation (e.g., mandatory fields) and lifecycle management (e.g., who, how, when revised and updated)**
 
