@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/dhsynergetech/kmt.svg?branch=dhs-angular-build)](https://travis-ci.org/dhsynergetech/kmt)
+
 # Knowledge Management Tool
 ## Features
 ### Knowledge Creation
