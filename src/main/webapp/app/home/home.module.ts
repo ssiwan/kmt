@@ -5,9 +5,15 @@ import { DhsKnowledgeManagementSharedModule } from '../shared';
 
 import { HOME_ROUTE, HomeComponent } from './';
 
+import { StatModule } from '../shared/stat';
+
+//import { HomeService } from './';
+
 @NgModule({
     imports: [
         DhsKnowledgeManagementSharedModule,
+        StatModule,
+      //  HomeService,
         RouterModule.forChild([ HOME_ROUTE ])
     ],
     declarations: [
@@ -16,6 +22,7 @@ import { HOME_ROUTE, HomeComponent } from './';
     entryComponents: [
     ],
     providers: [
+        // HomeService
     ],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
