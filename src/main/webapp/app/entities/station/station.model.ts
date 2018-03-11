@@ -6,6 +6,7 @@ export class Station implements BaseEntity {
         public name?: string,
         public county?: string,
         public articles?: BaseEntity[],
+        public engines?: BaseEntity[],
     ) {
     }
 }

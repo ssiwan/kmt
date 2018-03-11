@@ -44,6 +44,17 @@
 
         <addPrimaryKey columnNames="stations_id, articles_id" tableName="station_article"/>
         
+        <createTable tableName="station_engine">
+            <column name="engines_id" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+            <column name="stations_id" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <addPrimaryKey columnNames="stations_id, engines_id" tableName="station_engine"/>
+        
     </changeSet>
     <!-- jhipster-needle-liquibase-add-changeset - JHipster will add changesets here, do not remove-->
 </databaseChangeLog>

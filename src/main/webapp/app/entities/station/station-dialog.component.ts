@@ -10,6 +10,7 @@ import { Station } from './station.model';
 import { StationPopupService } from './station-popup.service';
 import { StationService } from './station.service';
 import { Article, ArticleService } from '../article';
+import { Engine, EngineService } from '../engine';
 
 @Component({
     selector: 'jhi-station-dialog',
@@ -22,11 +23,14 @@ export class StationDialogComponent implements OnInit {
 
     articles: Article[];
 
+    engines: Engine[];
+
     constructor(
         public activeModal: NgbActiveModal,
         private jhiAlertService: JhiAlertService,
         private stationService: StationService,
         private articleService: ArticleService,
+        private engineService: EngineService,
         private eventManager: JhiEventManager
     ) {
     }
@@ -35,6 +39,8 @@ export class StationDialogComponent implements OnInit {
         this.isSaving = false;
         this.articleService.query()
             .subscribe((res: HttpResponse<Article[]>) => { this.articles = res.body; }, (res: HttpErrorResponse) => this.onError(res.message));
+        this.engineService.query()
+            .subscribe((res: HttpResponse<Engine[]>) => { this.engines = res.body; }, (res: HttpErrorResponse) => this.onError(res.message));
     }
 
     clear() {
@@ -72,6 +78,10 @@ export class StationDialogComponent implements OnInit {
     }
 
     trackArticleById(index: number, item: Article) {
+        return item.id;
+    }
+
+    trackEngineById(index: number, item: Engine) {
         return item.id;
     }
 

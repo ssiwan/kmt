@@ -19,5 +19,16 @@
                                  referencedColumnNames="id"
                                  referencedTableName="article"/>
         
+        <addForeignKeyConstraint baseColumnNames="stations_id"
+                                 baseTableName="station_engine"
+                                 constraintName="fk_station_engine_stations_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="station"/>
+        <addForeignKeyConstraint baseColumnNames="engines_id"
+                                 baseTableName="station_engine"
+                                 constraintName="fk_station_engine_engines_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="engine"/>
+        
     </changeSet>
 </databaseChangeLog>

@@ -1,5 +1,6 @@
 package com.dhs.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
 import javax.validation.constraints.*;
@@ -38,6 +39,10 @@ public class Engine implements Serializable {
                joinColumns = @JoinColumn(name="engines_id", referencedColumnName="id"),
                inverseJoinColumns = @JoinColumn(name="articles_id", referencedColumnName="id"))
     private Set<Article> articles = new HashSet<>();
+
+    @ManyToMany(mappedBy = "engines")
+    @JsonIgnore
+    private Set<Station> stations = new HashSet<>();
 
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public Long getId() {
@@ -97,6 +102,31 @@ public class Engine implements Serializable {
 
     public void setArticles(Set<Article> articles) {
         this.articles = articles;
+    }
+
+    public Set<Station> getStations() {
+        return stations;
+    }
+
+    public Engine stations(Set<Station> stations) {
+        this.stations = stations;
+        return this;
+    }
+
+    public Engine addStation(Station station) {
+        this.stations.add(station);
+        station.getEngines().add(this);
+        return this;
+    }
+
+    public Engine removeStation(Station station) {
+        this.stations.remove(station);
+        station.getEngines().remove(this);
+        return this;
+    }
+
+    public void setStations(Set<Station> stations) {
+        this.stations = stations;
     }
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
 

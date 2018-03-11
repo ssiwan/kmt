@@ -22,6 +22,8 @@ public class StationDTO implements Serializable {
 
     private Set<ArticleDTO> articles = new HashSet<>();
 
+    private Set<EngineDTO> engines = new HashSet<>();
+
     public Long getId() {
         return id;
     }
@@ -52,6 +54,14 @@ public class StationDTO implements Serializable {
 
     public void setArticles(Set<ArticleDTO> articles) {
         this.articles = articles;
+    }
+
+    public Set<EngineDTO> getEngines() {
+        return engines;
+    }
+
+    public void setEngines(Set<EngineDTO> engines) {
+        this.engines = engines;
     }
 
     @Override

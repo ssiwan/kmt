@@ -10,6 +10,7 @@ import { Engine } from './engine.model';
 import { EnginePopupService } from './engine-popup.service';
 import { EngineService } from './engine.service';
 import { Article, ArticleService } from '../article';
+import { Station, StationService } from '../station';
 
 @Component({
     selector: 'jhi-engine-dialog',
@@ -22,11 +23,14 @@ export class EngineDialogComponent implements OnInit {
 
     articles: Article[];
 
+    stations: Station[];
+
     constructor(
         public activeModal: NgbActiveModal,
         private jhiAlertService: JhiAlertService,
         private engineService: EngineService,
         private articleService: ArticleService,
+        private stationService: StationService,
         private eventManager: JhiEventManager
     ) {
     }
@@ -35,6 +39,8 @@ export class EngineDialogComponent implements OnInit {
         this.isSaving = false;
         this.articleService.query()
             .subscribe((res: HttpResponse<Article[]>) => { this.articles = res.body; }, (res: HttpErrorResponse) => this.onError(res.message));
+        this.stationService.query()
+            .subscribe((res: HttpResponse<Station[]>) => { this.stations = res.body; }, (res: HttpErrorResponse) => this.onError(res.message));
     }
 
     clear() {
@@ -72,6 +78,10 @@ export class EngineDialogComponent implements OnInit {
     }
 
     trackArticleById(index: number, item: Article) {
+        return item.id;
+    }
+
+    trackStationById(index: number, item: Station) {
         return item.id;
     }
 
