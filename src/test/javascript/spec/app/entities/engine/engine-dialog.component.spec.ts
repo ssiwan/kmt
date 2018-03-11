@@ -10,6 +10,7 @@ import { EngineDialogComponent } from '../../../../../../main/webapp/app/entitie
 import { EngineService } from '../../../../../../main/webapp/app/entities/engine/engine.service';
 import { Engine } from '../../../../../../main/webapp/app/entities/engine/engine.model';
 import { ArticleService } from '../../../../../../main/webapp/app/entities/article';
+import { StationService } from '../../../../../../main/webapp/app/entities/station';
 
 describe('Component Tests', () => {
 
@@ -26,6 +27,7 @@ describe('Component Tests', () => {
                 declarations: [EngineDialogComponent],
                 providers: [
                     ArticleService,
+                    StationService,
                     EngineService
                 ]
             })

@@ -8,6 +8,14 @@
             "otherEntityName": "article",
             "otherEntityField": "title",
             "ownerSide": true
+        },
+        {
+            "relationshipName": "engine",
+            "otherEntityName": "engine",
+            "relationshipType": "many-to-many",
+            "otherEntityField": "number",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "station"
         }
     ],
     "fields": [
@@ -27,9 +35,9 @@
         }
     ],
     "changelogDate": "20180309165252",
-    "entityTableName": "station",
     "dto": "mapstruct",
-    "pagination": "pagination",
     "service": "serviceClass",
-    "jpaMetamodelFiltering": false
+    "entityTableName": "station",
+    "jpaMetamodelFiltering": false,
+    "pagination": "pagination"
 }

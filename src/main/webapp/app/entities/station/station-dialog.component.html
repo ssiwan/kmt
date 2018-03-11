@@ -41,6 +41,12 @@
                 <option [ngValue]="getSelected(station.articles, articleOption)" *ngFor="let articleOption of articles; trackBy: trackArticleById">{{articleOption.title}}</option>
             </select>
         </div>
+        <div class="form-group">
+            <label jhiTranslate="dhsKnowledgeManagementApp.station.engine" for="field_engine">Engine</label>
+            <select class="form-control" id="field_engine" multiple name="engine" [(ngModel)]="station.engines">
+                <option [ngValue]="getSelected(station.engines, engineOption)" *ngFor="let engineOption of engines; trackBy: trackEngineById">{{engineOption.number}}</option>
+            </select>
+        </div>
     </div>
     <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="clear()">

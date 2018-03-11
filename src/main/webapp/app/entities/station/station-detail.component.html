@@ -18,6 +18,12 @@
                 <a [routerLink]="['/article', article?.id ]">{{article.title}}</a>{{last ? '' : ', '}}
             </span>
         </dd>
+        <dt><span jhiTranslate="dhsKnowledgeManagementApp.station.engine">Engine</span></dt>
+        <dd>
+            <span *ngFor="let engine of station.engines; let last = last">
+                <a [routerLink]="['/engine', engine?.id ]">{{engine.number}}</a>{{last ? '' : ', '}}
+            </span>
+        </dd>
     </dl>
 
     <button type="submit"

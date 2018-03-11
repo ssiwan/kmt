@@ -18,7 +18,8 @@
             },
             "number": "Number",
             "status": "Status",
-            "article": "Article"
+            "article": "Articles",
+            "station": "Stations"
         }
     }
 }

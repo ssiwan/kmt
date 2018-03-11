@@ -13,6 +13,7 @@ export class Engine implements BaseEntity {
         public number?: string,
         public status?: EngineStatus,
         public articles?: BaseEntity[],
+        public stations?: BaseEntity[],
     ) {
     }
 }

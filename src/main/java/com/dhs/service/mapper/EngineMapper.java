@@ -12,6 +12,8 @@ import org.mapstruct.*;
 public interface EngineMapper extends EntityMapper<EngineDTO, Engine> {
 
 
+    @Mapping(target = "stations", ignore = true)
+    Engine toEntity(EngineDTO engineDTO);
 
     default Engine fromId(Long id) {
         if (id == null) {

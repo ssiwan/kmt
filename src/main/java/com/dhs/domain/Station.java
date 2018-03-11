@@ -36,6 +36,12 @@ public class Station implements Serializable {
                inverseJoinColumns = @JoinColumn(name="articles_id", referencedColumnName="id"))
     private Set<Article> articles = new HashSet<>();
 
+    @ManyToMany
+    @JoinTable(name = "station_engine",
+               joinColumns = @JoinColumn(name="stations_id", referencedColumnName="id"),
+               inverseJoinColumns = @JoinColumn(name="engines_id", referencedColumnName="id"))
+    private Set<Engine> engines = new HashSet<>();
+
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public Long getId() {
         return id;
@@ -94,6 +100,31 @@ public class Station implements Serializable {
 
     public void setArticles(Set<Article> articles) {
         this.articles = articles;
+    }
+
+    public Set<Engine> getEngines() {
+        return engines;
+    }
+
+    public Station engines(Set<Engine> engines) {
+        this.engines = engines;
+        return this;
+    }
+
+    public Station addEngine(Engine engine) {
+        this.engines.add(engine);
+        engine.getStations().add(this);
+        return this;
+    }
+
+    public Station removeEngine(Engine engine) {
+        this.engines.remove(engine);
+        engine.getStations().remove(this);
+        return this;
+    }
+
+    public void setEngines(Set<Engine> engines) {
+        this.engines = engines;
     }
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
 
