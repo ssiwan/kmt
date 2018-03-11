@@ -31,8 +31,9 @@ install:
   - yarn install
 script:
   - chmod +x mvnw
-  - ./mvnw clean test
+#  - ./mvnw clean test
   - yarn test
+  - ./mvnw package -Pprod,swagger -DskipTests
 #  - ./mvnw com.heroku.sdk:heroku-maven-plugin:1.1.1:deploy -DskipTests -Pprod -Dheroku.appName=
 notifications:
   webhooks:
