@@ -52,12 +52,12 @@
                 <option [ngValue]="getSelected(article.tags, tagOption)" *ngFor="let tagOption of tags; trackBy: trackTagById">{{tagOption.name}}</option>
             </select>
         </div>
-        <div class="form-group">
+        <!--div class="form-group">
             <label jhiTranslate="dhsKnowledgeManagementApp.article.changelog" for="field_changelog">Changelog</label>
             <select class="form-control" id="field_changelog" multiple name="changelog" [(ngModel)]="article.changelogs">
                 <option [ngValue]="getSelected(article.changelogs, changelogOption)" *ngFor="let changelogOption of changelogs; trackBy: trackChangelogById">{{changelogOption.modified}}</option>
             </select>
-        </div>
+        </div-->
     </div>
     <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="clear()">

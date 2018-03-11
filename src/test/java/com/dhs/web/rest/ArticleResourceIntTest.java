@@ -5,6 +5,8 @@ import com.dhs.DhsKnowledgeManagementApp;
 import com.dhs.domain.Article;
 import com.dhs.repository.ArticleRepository;
 import com.dhs.service.ArticleService;
+import com.dhs.service.ChangelogService;
+import com.dhs.service.UserService;
 import com.dhs.service.dto.ArticleDTO;
 import com.dhs.service.mapper.ArticleMapper;
 import com.dhs.web.rest.errors.ExceptionTranslator;
@@ -62,6 +64,12 @@ public class ArticleResourceIntTest {
     private ArticleService articleService;
 
     @Autowired
+    ChangelogService changeLogService;
+
+    @Autowired
+    UserService userService;
+
+    @Autowired
     private MappingJackson2HttpMessageConverter jacksonMessageConverter;
 
     @Autowired
@@ -80,7 +88,7 @@ public class ArticleResourceIntTest {
     @Before
     public void setup() {
         MockitoAnnotations.initMocks(this);
-        final ArticleResource articleResource = new ArticleResource(articleService);
+        final ArticleResource articleResource = new ArticleResource(articleService,changeLogService,userService);
         this.restArticleMockMvc = MockMvcBuilders.standaloneSetup(articleResource)
             .setCustomArgumentResolvers(pageableArgumentResolver)
             .setControllerAdvice(exceptionTranslator)
