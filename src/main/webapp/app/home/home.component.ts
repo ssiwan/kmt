@@ -57,6 +57,10 @@ export class HomeComponent implements OnInit {
 
     }
 
+    getStationId(index: number, item: Station) {
+        return item.id;
+    }
+
     registerAuthenticationSuccess() {
         this.eventManager.subscribe('authenticationSuccess', (message) => {
             this.principal.identity().then((account) => {

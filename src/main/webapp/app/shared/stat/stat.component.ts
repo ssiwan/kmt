@@ -10,9 +10,32 @@ export class StatComponent implements OnInit {
     @Input() count: number;
     @Input() label: string;
     @Input() data: number;
-    @Output() event: EventEmitter<any> = new EventEmitter();
+    @Input() engines: Array<{ id: number, number: number, status: string, articles: any }>;
+    @Output() event: EventEmitter<any> = new EventEmitter();    
 
-    constructor() {}
+    constructor() { }
 
-    ngOnInit() {}
+    ngOnInit() { }
+
+    getClass(status) {
+        switch (status) {
+            case "READY": return "success";
+            case "UNSTAFFED": return "warning";
+            case "INTRANSIT": return "primary";
+            case "OUTOFSERVICE": return "danger";
+        }
+    }
+
+    getIcon(status) {
+        switch (status) {
+            case "READY": return "fa-smile-o";
+            case "UNSTAFFED": return "fa-user-times";
+            case "INTRANSIT": return "fa-taxi";
+            case "OUTOFSERVICE": return "fa-times-circle";
+        }
+    }
+
+    // trackIdentity(index, item: engine) {
+    //     return item.id;
+    // }
 }
