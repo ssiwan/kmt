@@ -1,9 +1,11 @@
 package com.dhs.web.rest;
 
 import com.codahale.metrics.annotation.Timed;
+import com.dhs.domain.User;
 import com.dhs.security.SecurityUtils;
 import com.dhs.service.ArticleService;
 import com.dhs.service.ChangelogService;
+import com.dhs.service.MailService;
 import com.dhs.service.UserService;
 import com.dhs.web.rest.errors.BadRequestAlertException;
 import com.dhs.web.rest.util.HeaderUtil;
@@ -45,10 +47,14 @@ public class ArticleResource {
 
     private final UserService userService;
 
-    public ArticleResource(ArticleService articleService, ChangelogService changeLogService, UserService userService) {
+    private final MailService mailService;
+
+    public ArticleResource(ArticleService articleService, ChangelogService changeLogService, 
+        UserService userService, MailService mailService) {
         this.articleService = articleService;
         this.changeLogService = changeLogService;
         this.userService = userService;
+        this.mailService = mailService;
     }
 
     /**
@@ -70,6 +76,9 @@ public class ArticleResource {
         changeLog.setUserId(userService.getUserWithAuthoritiesByLogin(SecurityUtils.getCurrentUserLogin().orElse("")).orElse(null).getId());
         articleDTO.getChangelogs().add(changeLogService.save(changeLog));
         ArticleDTO result = articleService.save(articleDTO);
+        List<User> captains = userService.findAllCaptains();
+        //log.debug("User Captain --> " + captains.get(1).getLogin());
+        mailService.sendArticleCreationEmail(result, captains);
         return ResponseEntity.created(new URI("/api/articles/" + result.getId()))
             .headers(HeaderUtil.createEntityCreationAlert(ENTITY_NAME, result.getId().toString()))
             .body(result);

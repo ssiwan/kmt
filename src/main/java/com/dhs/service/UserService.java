@@ -267,4 +267,13 @@ public class UserService {
         return authorityRepository.findAll().stream().map(Authority::getName).collect(Collectors.toList());
     }
 
+    /**
+     * @return a list of all the AuthoritiesConstants.CAPTAIN
+     */
+    public List<User> findAllCaptains() {
+        return userRepository.findAll().stream()
+            .filter(p -> p.getAuthorities().stream()
+                .anyMatch(q -> q.getName().equals(AuthoritiesConstants.CAPTAIN)))
+            .collect(Collectors.toList());
+    }
 }

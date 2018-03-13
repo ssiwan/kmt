@@ -1,6 +1,7 @@
 package com.dhs.service;
 
 import com.dhs.domain.User;
+import com.dhs.service.dto.ArticleDTO;
 
 import io.github.jhipster.config.JHipsterProperties;
 
@@ -17,6 +18,7 @@ import org.thymeleaf.spring4.SpringTemplateEngine;
 import org.apache.commons.lang3.StringUtils;
 
 import javax.mail.internet.MimeMessage;
+import java.util.List;
 import java.util.Locale;
 
 /**
@@ -30,6 +32,8 @@ public class MailService {
     private final Logger log = LoggerFactory.getLogger(MailService.class);
 
     private static final String USER = "user";
+
+    private static final String ARTICLE = "article";
 
     private static final String BASE_URL = "baseUrl";
 
@@ -87,6 +91,19 @@ public class MailService {
     }
 
     @Async
+    public void sendArticleEmailFromTemplate(User user, ArticleDTO article, String templateName, String titleKey) {
+        Locale locale = Locale.forLanguageTag(user.getLangKey());
+        Context context = new Context(locale);
+        context.setVariable(USER, user);
+        context.setVariable(ARTICLE, article);
+        context.setVariable(BASE_URL, jHipsterProperties.getMail().getBaseUrl());
+        String content = templateEngine.process(templateName, context);
+        String subject = messageSource.getMessage(titleKey, null, locale);
+        sendEmail(user.getEmail(), subject, content, false, true);
+
+    }
+
+    @Async
     public void sendActivationEmail(User user) {
         log.debug("Sending activation email to '{}'", user.getEmail());
         sendEmailFromTemplate(user, "activationEmail", "email.activation.title");
@@ -116,4 +133,12 @@ public class MailService {
         String subject = messageSource.getMessage("email.social.registration.title", null, locale);
         sendEmail(user.getEmail(), subject, content, false, true);
     }
+
+    @Async
+    public void sendArticleCreationEmail(ArticleDTO article, List<User> captains) {
+        for (User user : captains) {
+            log.debug("Sending article creation email to '{}'", user.getEmail());
+            sendArticleEmailFromTemplate(user, article, "articleCreationEmail", "email.newarticle.title");
+        }
+    }    
 }
