@@ -7,7 +7,7 @@ import { HOME_ROUTE, HomeComponent } from './';
 
 import { StatModule } from '../shared/stat';
 
-//import { HomeService } from './';
+// import { HomeService } from './';
 
 @NgModule({
     imports: [

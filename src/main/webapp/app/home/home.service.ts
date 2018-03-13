@@ -15,7 +15,6 @@ export class HomeService {
 
     constructor(private http: HttpClient) { }
 
-    
     query(req?: any): Observable<HttpResponse<Station[]>> {
         const options = createRequestOption(req);
         return this.http.get<Station[]>(this.resourceUrl, { params: options, observe: 'response' })

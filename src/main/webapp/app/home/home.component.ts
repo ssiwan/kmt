@@ -42,7 +42,7 @@ export class HomeComponent implements OnInit {
         this.stationService.query({
             page: 0,
             size: 100,
-            sort: ""}).subscribe(
+            sort: ''}).subscribe(
                 (res: HttpResponse<Station[]>) => this.onSuccess(res.body, res.headers),
                 (res: HttpErrorResponse) => this.onError(res.message)
         );
