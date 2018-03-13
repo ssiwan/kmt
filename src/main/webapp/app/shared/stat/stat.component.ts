@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Engine } from '../../entities/engine/engine.model';
 
 @Component({
     selector: 'jhi-app-stat',
@@ -35,7 +36,7 @@ export class StatComponent implements OnInit {
         }
     }
 
-    // trackIdentity(index, item: engine) {
-    //     return item.id;
-    // }
+    getEngineId(index: number, item: Engine) {
+        return item.id;
+    }
 }
