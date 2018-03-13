@@ -25,7 +25,7 @@
             <tbody>
             <tr *ngFor="let station of stations ;trackBy: trackId">
                 <!--td><a [routerLink]="['../station', station.id ]">{{station.id}}</a></td-->
-                <td><a [routerLink]="['../station', station.id ]"></a>{{station.name}}</a></td>
+                <td><a [routerLink]="['../station', station.id ]">{{station.name}}</a></td>
                 <td>{{station.county}}</td>
                 <td class="text-right">
                     <div class="btn-group flex-btn-group-container">
