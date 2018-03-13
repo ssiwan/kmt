@@ -2,6 +2,7 @@ package com.dhs.web.rest;
 
 import com.codahale.metrics.annotation.Timed;
 import com.dhs.domain.User;
+import com.dhs.domain.enumeration.ArticleStatus;
 import com.dhs.security.SecurityUtils;
 import com.dhs.service.ArticleService;
 import com.dhs.service.ChangelogService;
@@ -75,9 +76,10 @@ public class ArticleResource {
         changeLog.setModified(Instant.now());
         changeLog.setUserId(userService.getUserWithAuthoritiesByLogin(SecurityUtils.getCurrentUserLogin().orElse("")).orElse(null).getId());
         articleDTO.getChangelogs().add(changeLogService.save(changeLog));
+        articleDTO.setStatus(ArticleStatus.DRAFT);
         ArticleDTO result = articleService.save(articleDTO);
         List<User> captains = userService.findAllCaptains();
-        //log.debug("User Captain --> " + captains.get(1).getLogin());
+        
         mailService.sendArticleCreationEmail(result, captains);
         return ResponseEntity.created(new URI("/api/articles/" + result.getId()))
             .headers(HeaderUtil.createEntityCreationAlert(ENTITY_NAME, result.getId().toString()))
