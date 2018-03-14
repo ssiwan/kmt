@@ -331,7 +331,7 @@ n.	Developed automated unit tests for their code | Unit tests are run by [Karma]
 o.	Setup or used a continuous integration system to automate the running of tests and continuously deployed their code to their IaaS or PaaS provider | Used Travis CI (travis-ci.org) for Continuous Integration.
 p.	Setup or used configuration management | Used GitHub configuration management: ![GitHub](https://github.com/dhsynergetech/kmt/blob/master/GitHub.png)
 q.	Setup or used continuous monitoring | Used PCF Metrics (pivotal.io) for continuous monitoring of the DHS Knowledge Management application: ![PCF Metrics](https://github.com/dhsynergetech/kmt/blob/master/PCFMetrics.png)
-r.	Deployed their software in an open source container, such as Docker (i.e., utilized operating-system-level virtualization) | **ToDo: INSERT RESPONSE**
+r.	Deployed their software in an open source container, such as Docker (i.e., utilized operating-system-level virtualization) | The KMT application is deployed in Pivotal Cloud Foundry (PCF) Platform as a Service.  The application can also be deployed in Kubernetes or Docker containers.
 s.	Provided sufficient documentation to install and run their prototype on another machine; and | **ToDo: INSERT RESPONSE**
 t.	Prototype and underlying platforms used to create and run the prototype are openly licensed and free of charge | The prototype and underlying platforms were openly licensed and free of charge: Pivotal, JHipster, Angular, and MySQL.
 
