@@ -5,7 +5,7 @@ A prototype of the DHS Knowledge Management Tool (KMT) is located at: https://dh
 
 ## Architectural Description / Code Flow
 
-**ToDo: Sabu - Please provide architectural description / Code Flow here.
+THe DHS KMT is built using the JHipster framework http://spring.io/blog/2015/02/10/introducing-jhipster.  JHipster is an open source project providing an integrated platform and development tools.  The DHS KMT is configured with Spring Boot java base, MySQL database, and Angular.js client.  The DHS KMT is deployed on Pivotal Cloud Foundry (PCF).
 
 ## Features
 ### Knowledge Creation
@@ -13,7 +13,7 @@ A prototype of the DHS Knowledge Management Tool (KMT) is located at: https://dh
 - These can be original records (e.g., specific work instructions or content) and/or packages of content, including documents, user-configurable forms, tables, and workflows
 
 To Create Knowledge Article, user first needs to “Register a new account”.
-![](https://github.com/dhsynergetech/kmt/blob/master/DHSKMTHomePage.png)
+![](https://github.com/dhsynergetech/kmt/blob/master/KMTHomePage.png)
 
 User then needs to fill in the required fields to Register.
 ![](https://github.com/dhsynergetech/kmt/blob/master/DHSKMTRegistrationPage.png)
