@@ -72,8 +72,7 @@ Administrators can assign roles for creation and lifecycle management using User
 
 ![](https://github.com/dhsynergetech/kmt/blob/master/DHSKMTUserAdmin.png)
 
-#### Requirement 6: Trigger escalation processes (e.g., automated emails/texts to approvers, reminders) for lifecycle activities
-revised and updated).
+#### Requirement 6: Trigger escalation processes (e.g., automated emails/texts to approvers, reminders) for lifecycle activities revised and updated).
 
 When Articles are created, an email is sent to fire captains requesting their approval of the article.
 
