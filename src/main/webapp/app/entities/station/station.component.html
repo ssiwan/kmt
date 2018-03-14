@@ -16,7 +16,7 @@
         <table class="table table-striped">
             <thead>
             <tr jhiSort [(predicate)]="predicate" [(ascending)]="reverse" [callback]="transition.bind(this)">
-            <th jhiSortBy="id"><span jhiTranslate="global.field.id">ID</span> <span class="fa fa-sort"></span></th>
+            <!--th jhiSortBy="id"><span jhiTranslate="global.field.id">ID</span> <span class="fa fa-sort"></span></th-->
             <th jhiSortBy="name"><span jhiTranslate="dhsKnowledgeManagementApp.station.name">Name</span> <span class="fa fa-sort"></span></th>
             <th jhiSortBy="county"><span jhiTranslate="dhsKnowledgeManagementApp.station.county">County</span> <span class="fa fa-sort"></span></th>
             <th></th>
@@ -24,8 +24,8 @@
             </thead>
             <tbody>
             <tr *ngFor="let station of stations ;trackBy: trackId">
-                <td><a [routerLink]="['../station', station.id ]">{{station.id}}</a></td>
-                <td>{{station.name}}</td>
+                <!--td><a [routerLink]="['../station', station.id ]">{{station.id}}</a></td-->
+                <td><a [routerLink]="['../station', station.id ]">{{station.name}}</a></td>
                 <td>{{station.county}}</td>
                 <td class="text-right">
                     <div class="btn-group flex-btn-group-container">

@@ -12,7 +12,7 @@ export class StatComponent implements OnInit {
     @Input() label: string;
     @Input() data: number;
     @Input() engines: Array<{ id: number, number: number, status: string, articles: any }>;
-    @Output() event: EventEmitter<any> = new EventEmitter();    
+    @Output() event: EventEmitter<any> = new EventEmitter();
 
     constructor() { }
 
@@ -20,19 +20,19 @@ export class StatComponent implements OnInit {
 
     getClass(status) {
         switch (status) {
-            case "READY": return "success";
-            case "UNSTAFFED": return "warning";
-            case "INTRANSIT": return "primary";
-            case "OUTOFSERVICE": return "danger";
+            case 'READY': return 'success';
+            case 'UNSTAFFED': return 'warning';
+            case 'INTRANSIT': return 'primary';
+            case 'OUTOFSERVICE': return 'danger';
         }
     }
 
     getIcon(status) {
         switch (status) {
-            case "READY": return "fa-smile-o";
-            case "UNSTAFFED": return "fa-user-times";
-            case "INTRANSIT": return "fa-taxi";
-            case "OUTOFSERVICE": return "fa-times-circle";
+            case 'READY': return 'fa-smile-o';
+            case 'UNSTAFFED': return 'fa-user-times';
+            case 'INTRANSIT': return 'fa-taxi';
+            case 'OUTOFSERVICE': return 'fa-times-circle';
         }
     }
 

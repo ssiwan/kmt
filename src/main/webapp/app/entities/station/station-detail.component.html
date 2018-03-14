@@ -15,13 +15,13 @@
         <dt><span jhiTranslate="dhsKnowledgeManagementApp.station.article">Article</span></dt>
         <dd>
             <span *ngFor="let article of station.articles; let last = last">
-                <a [routerLink]="['/article', article?.id ]">{{article.title}}</a>{{last ? '' : ', '}}
+                <a [routerLink]="['/article', article?.id ]">{{article.title}}</a><br/><!--{{last ? '' : ', '}}-->
             </span>
         </dd>
         <dt><span jhiTranslate="dhsKnowledgeManagementApp.station.engine">Engine</span></dt>
         <dd>
             <span *ngFor="let engine of station.engines; let last = last">
-                <a [routerLink]="['/engine', engine?.id ]">{{engine.number}}</a>{{last ? '' : ', '}}
+                <a [routerLink]="['/engine', engine?.id ]">{{engine.number}} ({{engine.status}})</a><br/><!--{{last ? '' : ', '}}-->
             </span>
         </dd>
     </dl>
