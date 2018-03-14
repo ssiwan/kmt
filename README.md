@@ -75,7 +75,9 @@ Administrators can assign roles for creation and lifecycle management using User
 #### Requirement 6: Trigger escalation processes (e.g., automated emails/texts to approvers, reminders) for lifecycle activities
 revised and updated).
 
-**ToDo: Describe.
+When Articles are created, an email is sent to fire captains requesting their approval of the article.
+
+![](https://github.com/dhsynergetech/kmt/blob/master/KMTApprovalEmail.png)
 
 ### Knowledge Development
 #### Requirement 7: Have the ability to update and improve KAs and access the value of usage as input to predicting new records or record types.
