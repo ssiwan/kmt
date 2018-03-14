@@ -5,7 +5,7 @@ A prototype of the DHS Knowledge Management Tool (KMT) is located at: https://dh
 
 ## Architectural Description / Code Flow
 
-THe DHS KMT is built using the JHipster framework http://spring.io/blog/2015/02/10/introducing-jhipster.  JHipster is an open source project providing an integrated platform and development tools.  The DHS KMT is configured with Spring Boot java base, MySQL database, and Angular.js client.  The DHS KMT is deployed on Pivotal Cloud Foundry (PCF).
+The DHS KMT is built using the JHipster framework http://spring.io/blog/2015/02/10/introducing-jhipster.  JHipster is an open source project providing an integrated platform and development tools.  The DHS KMT is configured with Spring Boot java base, MySQL database, and Angular.js client.  The DHS KMT is deployed on Pivotal Cloud Foundry (PCF).
 
 ## Features
 ### Knowledge Creation
@@ -45,7 +45,13 @@ Knowledge Article has been created.
 
 #### Requirement 2: Have the ability to provide multiple levels and formats of information in KAs (e.g., bullet points for senior technical levels, scripted specific details for junior/non-technical staff).
 
-**ToDo: Jacob or Brendon - Describe how DHS KMT does this.
+The DHS KMT includes summary level information at the Category level which can be expanded upon by selecting the relevant Article.  For example, for Station 23 – Forest Ranch user sees a list of Articles.
+
+![](https://github.com/dhsynergetech/kmt/blob/master/Station23Information.png)
+
+User can click on desired article and see detailed information below this.
+
+![](https://github.com/dhsynergetech/kmt/blob/master/Station23Article.png)
 
 #### Requirement 3: Allow for role-based security access, to allow control of access and level of information by login.
 
