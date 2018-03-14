@@ -15,7 +15,7 @@
 //         <div class="status">6</div>
 //       </div>
 //     </nb-card>`,
-  
+
 // })
 // export class StatusCardComponent {
 
