@@ -31,7 +31,7 @@ export class HomeComponent implements OnInit {
     predicate: any;
     reverse: any;
     totalStations: number;
-    totalItems: number;
+    totalEngines: number;
     totalArticles: number;
     totalTags: number;
     constructor(
@@ -59,14 +59,14 @@ export class HomeComponent implements OnInit {
             page: 0,
             size: 100,
             sort: ''}).subscribe(
-                (res: HttpResponse<Station[]>) => this.onSuccess(res.body, res.headers),
+                (res: HttpResponse<Station[]>) => this.onSuccessStationQuery(res.body, res.headers),
                 (res: HttpErrorResponse) => this.onError(res.message)
         );
-        
+
         this.engineService.query({
             page: 0,
             size: 100,
-            sort: ""}).subscribe(
+            sort: ''}).subscribe(
                 (res: HttpResponse<Engine[]>) => this.onSuccessEngineQuery(res.body, res.headers),
                 (res: HttpErrorResponse) => this.onError(res.message)
         );
@@ -94,28 +94,27 @@ export class HomeComponent implements OnInit {
             this.account = account;
         });
         this.registerAuthenticationSuccess();
-
     }
 
     getStationId(index: number, item: Station) {
         return item.id;
     }
 
-    getTotalStations(){
+    getTotalStations() {
         return 'Total Stations : '.concat(this.totalStations.toString());
     }
 
-    getTotalEngines(){
-        return 'Total Engines : '.concat(this.totalItems.toString());
+    getTotalEngines() {
+        return 'Total Engines : '.concat(this.totalEngines.toString());
     }
 
-    getTotalArticles(){
+    getTotalArticles() {
         return 'Total Articles : '.concat(this.totalArticles.toString());
     }
 
-    getTotalTags(){
+    getTotalTags() {
         return 'Total Tags : '.concat(this.totalTags.toString());
-    }    
+    }
 
     registerAuthenticationSuccess() {
         this.eventManager.subscribe('authenticationSuccess', (message) => {
@@ -133,31 +132,27 @@ export class HomeComponent implements OnInit {
         this.modalRef = this.loginModalService.open();
     }
 
-    private onSuccess(data, headers) {
-        // this.links = this.parseLinks.parse(headers.get('link'));
+    private onSuccessStationQuery(data, headers) {
         this.totalStations = headers.get('X-Total-Count');
-        // this.queryCount = this.totalItems;
-        // this.page = pagingParams.page;
         this.stations = data;
     }
 
-    private onSuccessEngineQuery(data, headers) {        
+    private onSuccessEngineQuery(data, headers) {
         this.engines = data;
-        this.totalItems = headers.get('X-Total-Count');
+        this.totalEngines = headers.get('X-Total-Count');
     }
 
-    private onSuccessArticlesQuery(data, headers) {        
+    private onSuccessArticlesQuery(data, headers) {
         this.articles = data;
         this.totalArticles = headers.get('X-Total-Count');
     }
 
-    private onSuccessTagsQuery(data, headers) {        
+    private onSuccessTagsQuery(data, headers) {
         this.tags = data;
         this.totalTags = headers.get('X-Total-Count');
-    }   
+    }
 
     private onError(error) {
         this.jhiAlertService.error(error.message, null, null);
-    }   
-    
+    }
 }

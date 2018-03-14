@@ -18,9 +18,9 @@ import { ScorecardModule } from '../shared/scorecard';
     declarations: [
         HomeComponent,
     ],
-    entryComponents: [        
+    entryComponents: [
     ],
-    providers: [        
+    providers: [
     ],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

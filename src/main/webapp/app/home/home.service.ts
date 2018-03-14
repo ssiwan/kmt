@@ -36,5 +36,5 @@ export class HomeService {
     private convertItemFromServer(station: Station): Station {
         const copy: Station = Object.assign({}, station);
         return copy;
-    }    
+    }
 }
