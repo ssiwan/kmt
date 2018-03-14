@@ -21,7 +21,7 @@ User then needs to fill in the required fields to Register.
 User will be sent a confirmation email with confirmation link that must be selected to activate the account.
 Once user is registered for an account, they must Sign in to access the KMT.
 
-![](https://github.com/dhsynergetech/kmt/blob/master/DHSKMTSignIn.png)
+![](https://github.com/dhsynergetech/kmt/blob/master/KMTSignIn.png)
 
 After the user is signed in, user can select Article under Entities.
 
