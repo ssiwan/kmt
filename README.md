@@ -314,7 +314,7 @@ c.	Understood what people needed by including people in the prototype developmen
 d.	Used at least a minimum of three (3) user-centric design techniques and/or tools | Used story boards, prototype testing, and an iterative process to interact with the firefighters (users).
 e.	Used GitHub to document code commits | DH Synergetech used the following GitHub repository: https://github.com/dhsynergetech/kmt
 f.	Used Swagger to document the RESTful API, and provided a link to the Swagger API | Restful APIs for the DHS Knowledge Management tool are in Swagger at: https://dhsknowledgemanagement.cfapps.io/#/admin/docs 
-g.	Complied with Section 508 of the Americans with Disabilities Act and WCAG 2.0 | **ToDo: INSERT RESPONSE**
+g.	Complied with Section 508 of the Americans with Disabilities Act and WCAG 2.0 | 508 compliance was tested with Wave http://wave.webaim.org/.
 h.	Created or used a design style guide and/or pattern library | Used jHipster framework with AngularJS code.
 i.	Performed usability tests with people | The Product Manager is a former firefighter who performed testing and facilitated user testing with the other firefighters.
 j.	Used an iterative approach, where feedback informed subsequent work or versions of the prototype | The DHSynergetech KMT was developed in two iterations (sprints) and reviewed by users during each sprint review.
