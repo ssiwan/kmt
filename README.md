@@ -292,7 +292,7 @@ A sprint review and retrospective was conducted on 3/7/2018 where the Kanban boa
 
 #### Results of Agile Approach
 
-The results of the agile approach and impressive contributions from the team, a functional, responsive, magnet board with underlying knowledge management tool functionality as per the RFI requirements was created in just over 3 weeks!
+The results of the agile approach and impressive contributions from the team were that a fully functional, responsive, magnet board with underlying knowledge management tool functionality as per the RFI requirements was created in just over 3 weeks!
 
 ![Responsive Magnet Board with underlying KMT](https://github.com/dhsynergetech/kmt/blob/master/KMTMagnetBoardResponsive.png)
 
