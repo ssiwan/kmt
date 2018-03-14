@@ -7,22 +7,20 @@ import { HOME_ROUTE, HomeComponent } from './';
 
 import { StatModule } from '../shared/stat';
 
-//import { HomeService } from './';
-
+import { ScorecardModule } from '../shared/scorecard';
 @NgModule({
     imports: [
         DhsKnowledgeManagementSharedModule,
         StatModule,
-      //  HomeService,
+        ScorecardModule,
         RouterModule.forChild([ HOME_ROUTE ])
     ],
     declarations: [
         HomeComponent,
     ],
-    entryComponents: [
+    entryComponents: [        
     ],
-    providers: [
-        // HomeService
+    providers: [        
     ],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

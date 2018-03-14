@@ -22,11 +22,6 @@ export class HomeService {
             .map((res: HttpResponse<Station[]>) => this.convertArrayResponse(res));
     }
 
-    private convertResponse(res: EntityResponseType): EntityResponseType {
-        const body: Station = this.convertItemFromServer(res.body);
-        return res.clone({body});
-    }
-
     private convertArrayResponse(res: HttpResponse<Station[]>): HttpResponse<Station[]> {
         const jsonResponse: Station[] = res.body;
         const body: Station[] = [];
@@ -42,13 +37,5 @@ export class HomeService {
     private convertItemFromServer(station: Station): Station {
         const copy: Station = Object.assign({}, station);
         return copy;
-    }
-
-    /**
-     * Convert a Station to a JSON which can be sent to the server.
-     */
-    private convert(station: Station): Station {
-        const copy: Station = Object.assign({}, station);
-        return copy;
-    }
+    }    
 }
