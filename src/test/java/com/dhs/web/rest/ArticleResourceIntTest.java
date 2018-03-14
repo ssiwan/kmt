@@ -6,6 +6,7 @@ import com.dhs.domain.Article;
 import com.dhs.repository.ArticleRepository;
 import com.dhs.service.ArticleService;
 import com.dhs.service.ChangelogService;
+import com.dhs.service.MailService;
 import com.dhs.service.UserService;
 import com.dhs.service.dto.ArticleDTO;
 import com.dhs.service.mapper.ArticleMapper;
@@ -70,6 +71,9 @@ public class ArticleResourceIntTest {
     UserService userService;
 
     @Autowired
+    MailService mailService;
+
+    @Autowired
     private MappingJackson2HttpMessageConverter jacksonMessageConverter;
 
     @Autowired
@@ -88,7 +92,7 @@ public class ArticleResourceIntTest {
     @Before
     public void setup() {
         MockitoAnnotations.initMocks(this);
-        final ArticleResource articleResource = new ArticleResource(articleService,changeLogService,userService);
+        final ArticleResource articleResource = new ArticleResource(articleService,changeLogService,userService,mailService);
         this.restArticleMockMvc = MockMvcBuilders.standaloneSetup(articleResource)
             .setCustomArgumentResolvers(pageableArgumentResolver)
             .setControllerAdvice(exceptionTranslator)
