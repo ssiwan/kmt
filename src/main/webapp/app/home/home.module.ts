@@ -9,7 +9,14 @@ import { StatModule } from '../shared/stat';
 
 import { ScorecardModule } from '../shared/scorecard';
 
+import { StationService } from '../entities/station';
 import {ChartsModule} from 'ng2-charts';
+
+import { EngineService } from '../entities/engine';
+
+import { ArticleService } from '../entities/article';
+
+import { TagService } from '../entities/tag';
 
 @NgModule({
     imports: [
@@ -25,6 +32,10 @@ import {ChartsModule} from 'ng2-charts';
     entryComponents: [
     ],
     providers: [
+        StationService,
+        EngineService,
+        ArticleService,
+        TagService
     ],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
