@@ -8,6 +8,15 @@ import { HOME_ROUTE, HomeComponent } from './';
 import { StatModule } from '../shared/stat';
 
 import { ScorecardModule } from '../shared/scorecard';
+
+import { StationService } from '../entities/station';
+
+import { EngineService } from '../entities/engine';
+
+import { ArticleService } from '../entities/article';
+
+import { TagService } from '../entities/tag';
+
 @NgModule({
     imports: [
         DhsKnowledgeManagementSharedModule,
@@ -21,6 +30,10 @@ import { ScorecardModule } from '../shared/scorecard';
     entryComponents: [
     ],
     providers: [
+        StationService,
+        EngineService,
+        ArticleService,
+        TagService
     ],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
