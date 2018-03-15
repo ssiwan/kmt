@@ -1,6 +1,6 @@
 # Technical Approach - DH Synergetech Knowledge Management Tool
 
-## DHSKnowledgeManagement
+## Prototype
 A prototype of the DH Synergetech (DHS) Knowledge Management Tool (KMT) is located at: https://dhsknowledgemanagement.cfapps.io
 
 ## Features
