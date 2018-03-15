@@ -119,7 +119,7 @@ A sprint review and retrospective was conducted on 3/7/2018 where the Kanban boa
 
 The results of the agile approach and impressive contributions from the team were that a fully functional, responsive, magnet board with underlying knowledge management tool functionality as per the RFI was created in just over 3 weeks!
 
-![Responsive Magnet Board with underlying KMT](https://github.com/dhsynergetech/kmt/blob/master/KMTMagnetBoardResponsive.png)
+![Responsive Magnet Board with underlying KMT](https://github.com/dhsynergetech/kmt/blob/master/ImagesForReadme/IMG_2215.PNG)
 
 ### Technical Approach Requirements
 
@@ -151,11 +151,11 @@ i.	Performed usability tests with people | The Product Manager is a former firef
 j.	Used an iterative approach, where feedback informed subsequent work or versions of the prototype | The DHSynergetech KMT was developed in two iterations (sprints) and reviewed by users during each sprint review.
 k.	Created a prototype that works on multiple devices, and presents a responsive design | The DHS KMT was developed on a responsive platform and tested on multiple devices during development iterations.
 l.	Used at least five (5) modern and open-source technologies, regardless of architectural layer (frontend, backend, etc.) | The 5 modern and open-source technologies used in the DHSynergetech KMT are: 1.	Pivotal Cloud Foundry (Pivotal.io); 2.	JHipster development platform (jhipster.tech); 3.	Angular javascript library for user interfaces (angularjs.org); 4.	MySQL database (mysql.com); and 5.	 GitHub source code management and collaboration tools (github.com)
-m.	Deployed the prototype on an Infrastructure as a Service (IaaS) or Platform as Service (PaaS) provider, and indicated which provider they used | The DHSynergetech KMT was deployed on Pivotal.io: ![Pivotal](https://github.com/dhsynergetech/kmt/blob/master/pivotalio.png)
+m.	Deployed the prototype on an Infrastructure as a Service (IaaS) or Platform as Service (PaaS) provider, and indicated which provider they used | The DHSynergetech KMT was deployed on Pivotal.io: ![Pivotal](https://github.com/dhsynergetech/kmt/blob/master/ImagesForReadme/pivotalio.png)
 n.	Developed automated unit tests for their code | Unit tests are run by [Karma][] and written with [Jasmine].
 o.	Setup or used a continuous integration system to automate the running of tests and continuously deployed their code to their IaaS or PaaS provider | Used Travis CI (travis-ci.org) for Continuous Integration.
-p.	Setup or used configuration management | Used GitHub configuration management: ![GitHub](https://github.com/dhsynergetech/kmt/blob/master/GitHub.png)
-q.	Setup or used continuous monitoring | Used PCF Metrics (pivotal.io) for continuous monitoring of the DHS Knowledge Management application: ![PCF Metrics](https://github.com/dhsynergetech/kmt/blob/master/PCFMetrics.png)
+p.	Setup or used configuration management | Used GitHub configuration management: ![GitHub](https://github.com/dhsynergetech/kmt/blob/master/ImagesForReadme/GitHub.png)
+q.	Setup or used continuous monitoring | Used PCF Metrics (pivotal.io) for continuous monitoring of the DHS Knowledge Management application: ![PCF Metrics](https://github.com/dhsynergetech/kmt/blob/master/ImagesForReadme/PCFMetrics.png)
 r.	Deployed their software in an open source container, such as Docker (i.e., utilized operating-system-level virtualization) | The KMT application is deployed in Pivotal Cloud Foundry (PCF) Platform as a Service.  The application can also be deployed in Kubernetes or Docker containers.
 s.	Provided sufficient documentation to install and run their prototype on another machine; and | **ToDo: INSERT RESPONSE**
 t.	Prototype and underlying platforms used to create and run the prototype are openly licensed and free of charge | The prototype and underlying platforms were openly licensed and free of charge: Pivotal, JHipster, Angular, and MySQL.
@@ -179,7 +179,6 @@ You will only need to run this command when dependencies change in [package.json
     yarn install
 
 We use yarn scripts and [Webpack][] as our build system.
-
 
 Run the following commands in two separate terminals to create a blissful development experience where your browser
 auto-refreshes when files change on your hard drive.
@@ -248,7 +247,6 @@ will generate few files:
     create src/main/webapp/app/my-component/my-component.component.html
     create src/main/webapp/app/my-component/my-component.component.ts
     update src/main/webapp/app/app.module.ts
-
 
 ## Building for production
 
@@ -322,7 +320,6 @@ To configure CI for your project, run the ci-cd sub-generator (`jhipster ci-cd`)
 [Using JHipster in production]: http://www.jhipster.tech/documentation-archive/v4.14.0/production/
 [Running tests page]: http://www.jhipster.tech/documentation-archive/v4.14.0/running-tests/
 [Setting up Continuous Integration]: http://www.jhipster.tech/documentation-archive/v4.14.0/setting-up-ci/
-
 
 [Node.js]: https://nodejs.org/
 [Yarn]: https://yarnpkg.org/
