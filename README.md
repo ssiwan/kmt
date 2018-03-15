@@ -9,10 +9,10 @@ A prototype of the DH Synergetech (DHS) Knowledge Management Tool (KMT) is locat
 - These can be original records (e.g., specific work instructions or content) and/or packages of content, including documents, user-configurable forms, tables, and workflows
 
 To Create Knowledge Article, user first needs to “Register a new account”.
-![](https://github.com/dhsynergetech/kmt/blob/master/KMTHomePage.png)
+![](https://github.com/dhsynergetech/kmt/blob/master/ImagesForReadme/KMTHomePage.png)
 
 User then needs to fill in the required fields to Register.
-![](https://github.com/dhsynergetech/kmt/blob/master/DHSKMTRegistrationPage.png)
+![](https://github.com/dhsynergetech/kmt/blob/master/ImagesForReadme/DHSKMTRegistrationPage.png)
 
 User will be sent a confirmation email with confirmation link that must be selected to activate the account.
 Once user is registered for an account, they must Sign in to access the KMT.
