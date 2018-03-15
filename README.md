@@ -17,7 +17,7 @@ User then needs to fill in the required fields to Register.
 User will be sent a confirmation email with confirmation link that must be selected to activate the account.
 Once user is registered for an account, they must Sign in to access the KMT.
 
-![](https://github.com/dhsynergetech/kmt/blob/master/KMTSignIn.png)
+![](https://github.com/dhsynergetech/kmt/blob/master/ImagesForReadme/KMTSignIn.png)
 
 After the user is signed in, user can select Article under Categories.
 
@@ -25,54 +25,54 @@ After the user is signed in, user can select Article under Categories.
 
 After user clicks on article, they can select Create a new Article to create a Knowledge Article.
 
-![](https://github.com/dhsynergetech/kmt/blob/master/DHSKMTCreateNewArticle.png)
+![](https://github.com/dhsynergetech/kmt/blob/master/ImagesForReadme/KMTCreateArticle2.png)
 
 User can create an Article using Markdown in the Content Field and a Preview is automatically displayed of the Knowledge Article.
 
-![](https://github.com/dhsynergetech/kmt/blob/master/DHSKMTArticlePreview.png)
+![](https://github.com/dhsynergetech/kmt/blob/master/ImagesForReadme/DHSKMTArticlePreview.png)
 
 Once the Knowledge Article is complete, user selects save.
 
-![](https://github.com/dhsynergetech/kmt/blob/master/DHSKMTArticleSave.png)
+![](https://github.com/dhsynergetech/kmt/blob/master/ImagesForReadme/DHSKMTArticleSave.png)
 
 Knowledge Article has been created.
 
-![](https://github.com/dhsynergetech/kmt/blob/master/DHSKMTArticlesMenu.png)
+![](https://github.com/dhsynergetech/kmt/blob/master/ImagesForReadme/KMTCreateArticle3.png)
 
 #### Requirement 2: Have the ability to provide multiple levels and formats of information in KAs (e.g., bullet points for senior technical levels, scripted specific details for junior/non-technical staff).
 
 The DHS KMT includes summary level information at the Category level which can be expanded upon by selecting the relevant Article.  For example, for Station 23 – Forest Ranch user sees a list of Articles.
 
-![](https://github.com/dhsynergetech/kmt/blob/master/Station23Information.png)
+![](https://github.com/dhsynergetech/kmt/blob/master/ImagesForReadme/Station23Information.png)
 
 User can click on desired article and see detailed information below this.
 
-![](https://github.com/dhsynergetech/kmt/blob/master/Station23Article.png)
+![](https://github.com/dhsynergetech/kmt/blob/master/ImagesForReadme/Station23Article.png)
 
 #### Requirement 3: Allow for role-based security access, to allow control of access and level of information by login.
 
 Only users with Captain role can approve Knowledge Articles by selecting Status of Approved.  Users with Firefighter role can create Knowledge Articles but not approve.
 
-![](https://github.com/dhsynergetech/kmt/blob/master/DHSKMTArticleApproval.png)
+![](https://github.com/dhsynergetech/kmt/blob/master/ImagesForReadme/DHSKMTArticleApproval.png)
 
 ### Knowledge Sharing
 #### Requirement 4: Allow for the promotion of process and information across systems and channels, as required.
 
 The DHS KMT is built with RESTful APIs published in Swagger, for integration with any application.  Using the RESTful APIs, other applications can call on web services from the KMT.  For example, another web application may get knowledge article information from the KMT to display on its web page.  This architecture supports the promotion of process and information across systems and channels as required. 
 
-![](https://github.com/dhsynergetech/kmt/blob/master/SwaggerAPIs.png)
+![](https://github.com/dhsynergetech/kmt/blob/master/ImagesForReadme/SwaggerAPIs.png)
 
 #### Requirement 5: Have the ability to create user-defined rules for creation (e.g., mandatory fields) and lifecycle management (e.g., who, how, when revised and updated).
 
 Administrators can assign roles for creation and lifecycle management using User Management features in KMT.
 
-![](https://github.com/dhsynergetech/kmt/blob/master/DHSKMTUserAdmin.png)
+![](https://github.com/dhsynergetech/kmt/blob/master/ImagesForReadme/DHSKMTUserAdmin.png)
 
 #### Requirement 6: Trigger escalation processes (e.g., automated emails/texts to approvers, reminders) for lifecycle activities revised and updated).
 
 When Articles are created, an email is sent to fire captains requesting their approval of the article.
 
-![](https://github.com/dhsynergetech/kmt/blob/master/KMTApprovalEmail.png)
+![](https://github.com/dhsynergetech/kmt/blob/master/ImagesForReadme/KMTApprovalEmail.png)
 
 ### Knowledge Development
 #### Requirement 7: Have the ability to update and improve KAs and access the value of usage as input to predicting new records or record types.
@@ -91,7 +91,7 @@ The scorecard is used to learn from existing records and prompt the creation of 
 > *Play 2 - Address the Whole Experience from Start to Finish*
 
 On 2/21/18, DH Synergetech consultants interviewed users (firefighters) in person at the Butte County CalFire Emergency Command Center to identify a useful application for a Knowledge Management Tool (KMT) that would provide value to CalFire. The firefighters suggested a KMT that mimics the functionality of the “Magnet Board” used to model the firefighting resources available to the county for incident response.  Currently the magnet board is a physical board located in the Command Center.  The goal of the Magnet Board KMT would be to represent the information represented in this magnet board in electronic format, viewable from any location in a responsive format.  Underlying the Magnet Board is new functionality for a Knowledge Management Tool for the fire stations, engines, and other associated firefighting equipment.   
-![Image of Magnet Board](https://github.com/dhsynergetech/kmt/blob/master/MagnetBoard.png)
+![Image of Magnet Board](https://github.com/dhsynergetech/kmt/blob/master/ImagesForReadme/MagnetBoard.png)
 
 *US Digital Service Playbook:*
 > *Play 3 - Make it Simple and Intuitive*
