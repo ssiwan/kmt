@@ -1,11 +1,7 @@
-# Technical Approach - DHS Knowledge Management Tool
+# Technical Approach - DH Synergetech Knowledge Management Tool
 
 ## DHSKnowledgeManagement
-A prototype of the DHS Knowledge Management Tool (KMT) is located at: https://dhsknowledgemanagement.cfapps.io
-
-## Architectural Description / Code Flow
-
-The DHS KMT is built using the JHipster framework http://spring.io/blog/2015/02/10/introducing-jhipster.  JHipster is an open source project providing an integrated platform and development tools.  The DHS KMT is configured with Spring Boot java base, MySQL database, and Angular.js client.  The DHS KMT is deployed on Pivotal Cloud Foundry (PCF).
+A prototype of the DH Synergetech (DHS) Knowledge Management Tool (KMT) is located at: https://dhsknowledgemanagement.cfapps.io
 
 ## Features
 ### Knowledge Creation
@@ -86,6 +82,87 @@ The DHS KMT is designed to use the Tag feature for users to assess the value of 
 #### Requirement 8: Show innovation by learning from existing records (e.g., types, content, usage) and prompting to create new KAs.
 
 The scorecard is used to learn from existing records and prompt the creation of new articles.
+
+## DHS Agile Methodology
+### User Involvement in Design
+*US Digital Service Playbook:*
+> *Play 1 - Understand What People Need*
+
+> *Play 2 - Address the Whole Experience from Start to Finish*
+
+On 2/21/18, DH Synergetech consultants interviewed users (firefighters) in person at the Butte County CalFire Emergency Command Center to identify a useful application for a Knowledge Management Tool (KMT) that would provide value to CalFire. The firefighters suggested a KMT that mimics the functionality of the “Magnet Board” used to model the firefighting resources available to the county for incident response.  Currently the magnet board is a physical board located in the Command Center.  The goal of the Magnet Board KMT would be to represent the information represented in this magnet board in electronic format, viewable from any location in a responsive format.  Underlying the Magnet Board is new functionality for a Knowledge Management Tool for the fire stations, engines, and other associated firefighting equipment.   
+![Image of Magnet Board](https://github.com/dhsynergetech/kmt/blob/master/MagnetBoard.png)
+
+*US Digital Service Playbook:*
+> *Play 3 - Make it Simple and Intuitive*
+
+Initial mockups based on the Magnet Board were developed and shared with development team in GitHub https://github.com/dhsynergetech/kmt/blob/master/CalFire%20Mockups%20v2.docx
+
+### Sprint Planning
+
+*US Digital Service Playbook:*
+> *Play 4 - Build the Service Using Agile and Iterative Practices*
+
+The DH Synergetech consultants began the scrum process on 2/22/18 with Sprint planning session to review draft user stories based on the interview with firefighters as well as requirements in the RFI.  User stories were developed, documented, and prioritized in the Kanban board in GitHub at https://github.com/dhsynergetech/kmt/projects/1
+
+### Daily Scrum
+The DH Synergetech consultants began daily 15 minute scrum calls on 2/23/18, with a plan to conduct two 1 (one) week sprints for the RFI.  Plan is to conduct sprint review's with firefighters to obtain feedback on the CalFire Magnet Board KMT tool. Daily collaboration for the team is enhanced via a Slack channel at https://dhsynergetech.slack.com/?redir=%2Fhome
+
+### Sprint Reviews and Retrospectives
+
+*US Digital Service Playbook:*
+> *Play 12 - Use Data to Drive Decisions*
+
+A sprint review and retrospective was conducted on 3/7/2018 where the Kanban board from sprint 1 was reviewed.  Stories were reviewed with demonstrations of the KMT prototype and further development items were discussed.  Items that were completed were moved to the Done column on the Kanban board and remaining items in the product backlog were discussed.  Stories for the next sprint were identified and moved to the In Progress column.  Retrospective discussion was conducted and changes in our approach for next sprint were identified (for example, changing from ReactJS to AngularJS in the next build).  Product Manager started developing plan to review with firefighter users in next few days after new build.
+
+#### Results of Agile Approach
+
+The results of the agile approach and impressive contributions from the team were that a fully functional, responsive, magnet board with underlying knowledge management tool functionality as per the RFI was created in just over 3 weeks!
+
+![Responsive Magnet Board with underlying KMT](https://github.com/dhsynergetech/kmt/blob/master/KMTMagnetBoardResponsive.png)
+
+### Technical Approach Requirements
+
+*US Digital Service Playbook:*
+> *Play 5 - Structure Budgets and Contracts to Support Delivery (see Requirement a.)*
+
+> *Play 6 - Assign One Leader and Hold that Person Accountable (see Requirement a.)*
+
+> *Play 7 - Bring in Experienced Teams (see Requirement b.)*
+
+> *Play 8 - Choose a Modern Technology Stack (see Requirement l.)*
+
+> *Play 9 - Deploy in a Flexible Hosting Environment (see Requirement m.)*
+
+> *Play 13 - Default to open (see Requirement t.)*
+
+
+Requirement | DH Synergetech Approach
+-------------------- | --------------------
+a.	Assigned one (1) leader and gave that person authority and responsibility and held that person accountable for the quality of the prototype submitted | Assigned Brendon Delong as Delivery Manager responsible for the prototype.
+b.	Assembled a multidisciplinary and collaborative team that includes, at a minimum, five (5) of the labor categories as identified in Attachment B: PQVP AD-DS Labor Category Description | Assembled an experienced, multi-disciplinary team: Delivery Manager (Brendon DeLong), Product Manager (Jacob Hayes), Agile Coach (Pamela Jarrett), Technical Architect (Sabu Azeez), Front End Developer (Steve Hoang), Full Stack Web Developer (Shabna Shurafadeen).
+c.	Understood what people needed by including people in the prototype development and design process | Involved users: Design of KMT, User Stories, Sprint Reviews, User Testing, and an iterative development process.
+d.	Used at least a minimum of three (3) user-centric design techniques and/or tools | Used story boards, prototype testing, and an iterative process to interact with the firefighters (users).
+e.	Used GitHub to document code commits | DH Synergetech used the following GitHub repository: https://github.com/dhsynergetech/kmt
+f.	Used Swagger to document the RESTful API, and provided a link to the Swagger API | Restful APIs for the DHS Knowledge Management tool are in Swagger at: https://dhsknowledgemanagement.cfapps.io/#/admin/docs 
+g.	Complied with Section 508 of the Americans with Disabilities Act and WCAG 2.0 | 508 compliance was tested with Wave http://wave.webaim.org/.
+h.	Created or used a design style guide and/or pattern library | Used jHipster framework with AngularJS code.
+i.	Performed usability tests with people | The Product Manager is a former firefighter who performed testing and facilitated user testing with the other firefighters.
+j.	Used an iterative approach, where feedback informed subsequent work or versions of the prototype | The DHSynergetech KMT was developed in two iterations (sprints) and reviewed by users during each sprint review.
+k.	Created a prototype that works on multiple devices, and presents a responsive design | The DHS KMT was developed on a responsive platform and tested on multiple devices during development iterations.
+l.	Used at least five (5) modern and open-source technologies, regardless of architectural layer (frontend, backend, etc.) | The 5 modern and open-source technologies used in the DHSynergetech KMT are: 1.	Pivotal Cloud Foundry (Pivotal.io); 2.	JHipster development platform (jhipster.tech); 3.	Angular javascript library for user interfaces (angularjs.org); 4.	MySQL database (mysql.com); and 5.	 GitHub source code management and collaboration tools (github.com)
+m.	Deployed the prototype on an Infrastructure as a Service (IaaS) or Platform as Service (PaaS) provider, and indicated which provider they used | The DHSynergetech KMT was deployed on Pivotal.io: ![Pivotal](https://github.com/dhsynergetech/kmt/blob/master/pivotalio.png)
+n.	Developed automated unit tests for their code | Unit tests are run by [Karma][] and written with [Jasmine].
+o.	Setup or used a continuous integration system to automate the running of tests and continuously deployed their code to their IaaS or PaaS provider | Used Travis CI (travis-ci.org) for Continuous Integration.
+p.	Setup or used configuration management | Used GitHub configuration management: ![GitHub](https://github.com/dhsynergetech/kmt/blob/master/GitHub.png)
+q.	Setup or used continuous monitoring | Used PCF Metrics (pivotal.io) for continuous monitoring of the DHS Knowledge Management application: ![PCF Metrics](https://github.com/dhsynergetech/kmt/blob/master/PCFMetrics.png)
+r.	Deployed their software in an open source container, such as Docker (i.e., utilized operating-system-level virtualization) | The KMT application is deployed in Pivotal Cloud Foundry (PCF) Platform as a Service.  The application can also be deployed in Kubernetes or Docker containers.
+s.	Provided sufficient documentation to install and run their prototype on another machine; and | **ToDo: INSERT RESPONSE**
+t.	Prototype and underlying platforms used to create and run the prototype are openly licensed and free of charge | The prototype and underlying platforms were openly licensed and free of charge: Pivotal, JHipster, Angular, and MySQL.
+
+## Architectural Description / Code Flow
+
+The DHS KMT is built using the JHipster framework http://spring.io/blog/2015/02/10/introducing-jhipster.  JHipster is an open source project providing an integrated platform and development tools.  The DHS KMT is configured with Spring Boot java base, MySQL database, and Angular.js client.  The DHS KMT is deployed on Pivotal Cloud Foundry (PCF).
 
 ## DHSKnowledgeManagement Development / How-To's
 
@@ -201,14 +278,14 @@ Unit tests are run by [Karma][] and written with [Jasmine][]. They're located in
 
     yarn test
 
+For more information, refer to the [Running tests page][].
+
 ### Security Testing
 
 *US Digital Service Playbook:*
 > *Play 11 - Manage Security and Privacy through Reusable Processes*
 
 The DHS KMT security testing uses Vega https://subgraph.com/vega/.  Vega is used to detect web vulnerabilities such as cross site scripting and other web vulnerabilities.
-
-For more information, refer to the [Running tests page][].
 
 ## Using Docker to simplify development
 
@@ -257,82 +334,3 @@ To configure CI for your project, run the ci-cd sub-generator (`jhipster ci-cd`)
 [Protractor]: https://angular.github.io/protractor/
 [Leaflet]: http://leafletjs.com/
 [DefinitelyTyped]: http://definitelytyped.org/
-
-## DHS Agile Methodology
-### User Involvement in Design
-*US Digital Service Playbook:*
-> *Play 1 - Understand What People Need*
-
-> *Play 2 - Address the Whole Experience from Start to Finish*
-
-On 2/21/18, DH Synergetech consultants interviewed users (firefighters) in person at the Butte County CalFire Emergency Command Center to identify a useful application for a Knowledge Management Tool (KMT) that would provide value to CalFire. The firefighters suggested a KMT that mimics the functionality of the “Magnet Board” used to model the firefighting resources available to the county for incident response.  Currently the magnet board is a physical board located in the Command Center.  The goal of the Magnet Board KMT would be to represent the information represented in this magnet board in electronic format, viewable from any location in a responsive format.  Underlying the Magnet Board is new functionality for a Knowledge Management Tool for the fire stations, engines, and other associated firefighting equipment.   
-![Image of Magnet Board](https://github.com/dhsynergetech/kmt/blob/master/MagnetBoard.png)
-
-*US Digital Service Playbook:*
-> *Play 3 - Make it Simple and Intuitive*
-
-Initial mockups based on the Magnet Board were developed and shared with development team in GitHub https://github.com/dhsynergetech/kmt/blob/master/CalFire%20Mockups%20v2.docx
-
-### Sprint Planning
-
-*US Digital Service Playbook:*
-> *Play 4 - Build the Service Using Agile and Iterative Practices*
-
-The DH Synergetech consultants began the scrum process on 2/22/18 with Sprint planning session to review draft user stories based on the interview with firefighters as well as requirements in the RFI.  User stories were developed, documented, and prioritized in the Kanban board in GitHub at https://github.com/dhsynergetech/kmt/projects/1
-
-### Daily Scrum
-The DH Synergetech consultants began daily 15 minute scrum calls on 2/23/18, with a plan to conduct two 1 (one) week sprints for the RFI.  Plan is to conduct sprint review's with firefighters to obtain feedback on the CalFire Magnet Board KMT tool. Daily collaboration for the team is enhanced via a Slack channel at https://dhsynergetech.slack.com/?redir=%2Fhome
-
-### Sprint Reviews and Retrospectives
-
-*US Digital Service Playbook:*
-> *Play 12 - Use Data to Drive Decisions*
-
-A sprint review and retrospective was conducted on 3/7/2018 where the Kanban board from sprint 1 was reviewed.  Stories were reviewed with demonstrations of the KMT prototype and further development items were discussed.  Items that were completed were moved to the Done column on the Kanban board and remaining items in the product backlog were discussed.  Stories for the next sprint were identified and moved to the In Progress column.  Retrospective discussion was conducted and changes in our approach for next sprint were identified (for example, changing from ReactJS to AngularJS in the next build).  Product Manager started developing plan to review with firefighter users in next few days after new build.
-
-#### Results of Agile Approach
-
-The results of the agile approach and impressive contributions from the team were that a fully functional, responsive, magnet board with underlying knowledge management tool functionality as per the RFI requirements was created in just over 3 weeks!
-
-![Responsive Magnet Board with underlying KMT](https://github.com/dhsynergetech/kmt/blob/master/KMTMagnetBoardResponsive.png)
-
-### Technical Approach Requirements
-
-*US Digital Service Playbook:*
-> *Play 5 - Structure Budgets and Contracts to Support Delivery (see Requirement a.)*
-
-> *Play 6 - Assign One Leader and Hold that Person Accountable (see Requirement a.)*
-
-> *Play 7 - Bring in Experienced Teams (see Requirement b.)*
-
-> *Play 8 - Choose a Modern Technology Stack (see Requirement l.)*
-
-> *Play 9 - Deploy in a Flexible Hosting Environment (see Requirement m.)*
-
-> *Play 13 - Default to open (see Requirement t.)*
-
-
-Requirement | DH Synergetech Approach
--------------------- | --------------------
-a.	Assigned one (1) leader and gave that person authority and responsibility and held that person accountable for the quality of the prototype submitted | Assigned Brendon Delong as Delivery Manager responsible for the prototype.
-b.	Assembled a multidisciplinary and collaborative team that includes, at a minimum, five (5) of the labor categories as identified in Attachment B: PQVP AD-DS Labor Category Description | Assembled an experienced, multi-disciplinary team: Delivery Manager (Brendon DeLong), Product Manager (Jacob Hayes), Agile Coach (Pamela Jarrett), Technical Architect (Sabu Azeez), Front End Developer (Steve Hoang), Full Stack Web Developer (Shabna Shurafadeen).
-c.	Understood what people needed by including people in the prototype development and design process | Involved users: Design of KMT, User Stories, Sprint Reviews, User Testing, and an iterative development process.
-d.	Used at least a minimum of three (3) user-centric design techniques and/or tools | Used story boards, prototype testing, and an iterative process to interact with the firefighters (users).
-e.	Used GitHub to document code commits | DH Synergetech used the following GitHub repository: https://github.com/dhsynergetech/kmt
-f.	Used Swagger to document the RESTful API, and provided a link to the Swagger API | Restful APIs for the DHS Knowledge Management tool are in Swagger at: https://dhsknowledgemanagement.cfapps.io/#/admin/docs 
-g.	Complied with Section 508 of the Americans with Disabilities Act and WCAG 2.0 | 508 compliance was tested with Wave http://wave.webaim.org/.
-h.	Created or used a design style guide and/or pattern library | Used jHipster framework with AngularJS code.
-i.	Performed usability tests with people | The Product Manager is a former firefighter who performed testing and facilitated user testing with the other firefighters.
-j.	Used an iterative approach, where feedback informed subsequent work or versions of the prototype | The DHSynergetech KMT was developed in two iterations (sprints) and reviewed by users during each sprint review.
-k.	Created a prototype that works on multiple devices, and presents a responsive design | The DHS KMT was developed on a responsive platform and tested on multiple devices during development iterations.
-l.	Used at least five (5) modern and open-source technologies, regardless of architectural layer (frontend, backend, etc.) | The 5 modern and open-source technologies used in the DHSynergetech KMT are: 1.	Pivotal Cloud Foundry (Pivotal.io); 2.	JHipster development platform (jhipster.tech); 3.	Angular javascript library for user interfaces (angularjs.org); 4.	MySQL database (mysql.com); and 5.	 GitHub source code management and collaboration tools (github.com)
-m.	Deployed the prototype on an Infrastructure as a Service (IaaS) or Platform as Service (PaaS) provider, and indicated which provider they used | The DHSynergetech KMT was deployed on Pivotal.io: ![Pivotal](https://github.com/dhsynergetech/kmt/blob/master/pivotalio.png)
-n.	Developed automated unit tests for their code | Unit tests are run by [Karma][] and written with [Jasmine].
-o.	Setup or used a continuous integration system to automate the running of tests and continuously deployed their code to their IaaS or PaaS provider | Used Travis CI (travis-ci.org) for Continuous Integration.
-p.	Setup or used configuration management | Used GitHub configuration management: ![GitHub](https://github.com/dhsynergetech/kmt/blob/master/GitHub.png)
-q.	Setup or used continuous monitoring | Used PCF Metrics (pivotal.io) for continuous monitoring of the DHS Knowledge Management application: ![PCF Metrics](https://github.com/dhsynergetech/kmt/blob/master/PCFMetrics.png)
-r.	Deployed their software in an open source container, such as Docker (i.e., utilized operating-system-level virtualization) | The KMT application is deployed in Pivotal Cloud Foundry (PCF) Platform as a Service.  The application can also be deployed in Kubernetes or Docker containers.
-s.	Provided sufficient documentation to install and run their prototype on another machine; and | **ToDo: INSERT RESPONSE**
-t.	Prototype and underlying platforms used to create and run the prototype are openly licensed and free of charge | The prototype and underlying platforms were openly licensed and free of charge: Pivotal, JHipster, Angular, and MySQL.
-
-
