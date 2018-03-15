@@ -34,6 +34,9 @@ export class HomeComponent implements OnInit {
     totalEngines: number;
     totalArticles: number;
     totalTags: number;
+    outstandingArticles: Map<string, number> = new Map<string, number>();
+    goodArticles: Map<string, number> = new Map<string, number>();
+    poorArticles: Map<string, number> = new Map<string, number>();
     constructor(
         private principal: Principal,
         private loginModalService: LoginModalService,
@@ -142,9 +145,41 @@ export class HomeComponent implements OnInit {
         this.totalEngines = headers.get('X-Total-Count');
     }
 
+    private groupBy(tagName, review) {
+        switch (review) {
+            case 'Outstanding' :
+                const x = this.outstandingArticles.get(tagName);
+                this.outstandingArticles.set(tagName, 
+                    x === undefined ? 0 :  x + 1);
+            case 'Good' :
+                const y = this.goodArticles.get(tagName);
+                this.goodArticles.set(tagName, 
+                    y === undefined ? 0 : y + 1);
+            case 'Poor' :
+                const z = this.poorArticles.get(tagName);
+                this.poorArticles.set(tagName, 
+                    z === undefined ? 0 : z + 1);
+        }
+    }
+
     private onSuccessArticlesQuery(data, headers) {
         this.articles = data;
+
+        data.forEach(article => {
+            article.tags.forEach(tag => {
+                this.groupBy(tag.name, article.review);
+            });
+        });
+
+        console.log('Outstanding : ', this.outstandingArticles);
+        console.log('Good : ', this.goodArticles);
+        console.log('Poor : ', this.poorArticles);
+
         this.totalArticles = headers.get('X-Total-Count');
+    }
+
+    getArtilePerType(data){
+        return data.map(res => res.tags);
     }
 
     private onSuccessTagsQuery(data, headers) {
