@@ -19,9 +19,9 @@ Once user is registered for an account, they must Sign in to access the KMT.
 
 ![](https://github.com/dhsynergetech/kmt/blob/master/KMTSignIn.png)
 
-After the user is signed in, user can select Article under Entities.
+After the user is signed in, user can select Article under Categories.
 
-![](https://github.com/dhsynergetech/kmt/blob/master/DHSKMTEntitiesKnowledgeArticle.png)
+![](https://github.com/dhsynergetech/kmt/blob/master/ImagesForReadme/KMTCreateArticle1.png)
 
 After user clicks on article, they can select Create a new Article to create a Knowledge Article.
 
