@@ -18,9 +18,10 @@
             },
             "title": "Title",
             "content": "Content",
+            "review": "Review",
             "status": "Status",
             "tag": "Tag",
-            "changelog": "Changelog",
+            "changelog": "Change History",
             "station": "Station",
             "engine": "Engine",
             "preview": "Preview"

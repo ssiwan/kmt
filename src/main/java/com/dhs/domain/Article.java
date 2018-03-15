@@ -12,6 +12,8 @@ import java.util.Objects;
 
 import com.dhs.domain.enumeration.ArticleStatus;
 
+import com.dhs.domain.enumeration.ArticleReview;
+
 /**
  * A Article.
  */
@@ -37,6 +39,10 @@ public class Article implements Serializable {
     @Enumerated(EnumType.STRING)
     @Column(name = "status")
     private ArticleStatus status;
+
+    @Enumerated(EnumType.STRING)
+    @Column(name = "review")
+    private ArticleReview review;
 
     @ManyToMany
     @JoinTable(name = "article_tag",
@@ -104,6 +110,19 @@ public class Article implements Serializable {
 
     public void setStatus(ArticleStatus status) {
         this.status = status;
+    }
+
+    public ArticleReview getReview() {
+        return review;
+    }
+
+    public Article review(ArticleReview review) {
+        this.review = review;
+        return this;
+    }
+
+    public void setReview(ArticleReview review) {
+        this.review = review;
     }
 
     public Set<Tag> getTags() {
@@ -234,6 +253,7 @@ public class Article implements Serializable {
             ", title='" + getTitle() + "'" +
             ", content='" + getContent() + "'" +
             ", status='" + getStatus() + "'" +
+            ", review='" + getReview() + "'" +
             "}";
     }
 }

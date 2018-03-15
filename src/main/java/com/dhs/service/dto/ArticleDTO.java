@@ -8,6 +8,7 @@ import java.util.Set;
 import java.util.Objects;
 import javax.persistence.Lob;
 import com.dhs.domain.enumeration.ArticleStatus;
+import com.dhs.domain.enumeration.ArticleReview;
 
 /**
  * A DTO for the Article entity.
@@ -24,6 +25,8 @@ public class ArticleDTO implements Serializable {
     private String content;
 
     private ArticleStatus status;
+
+    private ArticleReview review;
 
     private Set<TagDTO> tags = new HashSet<>();
 
@@ -59,6 +62,14 @@ public class ArticleDTO implements Serializable {
 
     public void setStatus(ArticleStatus status) {
         this.status = status;
+    }
+
+    public ArticleReview getReview() {
+        return review;
+    }
+
+    public void setReview(ArticleReview review) {
+        this.review = review;
     }
 
     public Set<TagDTO> getTags() {
@@ -105,6 +116,7 @@ public class ArticleDTO implements Serializable {
             ", title='" + getTitle() + "'" +
             ", content='" + getContent() + "'" +
             ", status='" + getStatus() + "'" +
+            ", review='" + getReview() + "'" +
             "}";
     }
 }

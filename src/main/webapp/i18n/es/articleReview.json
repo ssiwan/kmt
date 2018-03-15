@@ -1,0 +1,10 @@
+{
+    "dhsKnowledgeManagementApp": {
+        "ArticleReview" : {
+            "null": "",
+            "Outstanding": "Outstanding",
+            "Good": "Good",
+            "Poor": "Poor"
+        }
+    }
+}

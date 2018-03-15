@@ -37,6 +37,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 import com.dhs.domain.enumeration.ArticleStatus;
+import com.dhs.domain.enumeration.ArticleReview;
 /**
  * Test class for the ArticleResource REST controller.
  *
@@ -54,6 +55,9 @@ public class ArticleResourceIntTest {
 
     private static final ArticleStatus DEFAULT_STATUS = ArticleStatus.DRAFT;
     private static final ArticleStatus UPDATED_STATUS = ArticleStatus.APPROVED;
+
+    private static final ArticleReview DEFAULT_REVIEW = ArticleReview.Outstanding;
+    private static final ArticleReview UPDATED_REVIEW = ArticleReview.Good;
 
     @Autowired
     private ArticleRepository articleRepository;
@@ -110,7 +114,8 @@ public class ArticleResourceIntTest {
         Article article = new Article()
             .title(DEFAULT_TITLE)
             .content(DEFAULT_CONTENT)
-            .status(DEFAULT_STATUS);
+            .status(DEFAULT_STATUS)
+            .review(DEFAULT_REVIEW);
         return article;
     }
 
@@ -138,6 +143,7 @@ public class ArticleResourceIntTest {
         assertThat(testArticle.getTitle()).isEqualTo(DEFAULT_TITLE);
         assertThat(testArticle.getContent()).isEqualTo(DEFAULT_CONTENT);
         assertThat(testArticle.getStatus()).isEqualTo(DEFAULT_STATUS);
+        assertThat(testArticle.getReview()).isEqualTo(DEFAULT_REVIEW);
     }
 
     @Test
@@ -211,7 +217,8 @@ public class ArticleResourceIntTest {
             .andExpect(jsonPath("$.[*].id").value(hasItem(article.getId().intValue())))
             .andExpect(jsonPath("$.[*].title").value(hasItem(DEFAULT_TITLE.toString())))
             .andExpect(jsonPath("$.[*].content").value(hasItem(DEFAULT_CONTENT.toString())))
-            .andExpect(jsonPath("$.[*].status").value(hasItem(DEFAULT_STATUS.toString())));
+            .andExpect(jsonPath("$.[*].status").value(hasItem(DEFAULT_STATUS.toString())))
+            .andExpect(jsonPath("$.[*].review").value(hasItem(DEFAULT_REVIEW.toString())));
     }
 
     @Test
@@ -227,7 +234,8 @@ public class ArticleResourceIntTest {
             .andExpect(jsonPath("$.id").value(article.getId().intValue()))
             .andExpect(jsonPath("$.title").value(DEFAULT_TITLE.toString()))
             .andExpect(jsonPath("$.content").value(DEFAULT_CONTENT.toString()))
-            .andExpect(jsonPath("$.status").value(DEFAULT_STATUS.toString()));
+            .andExpect(jsonPath("$.status").value(DEFAULT_STATUS.toString()))
+            .andExpect(jsonPath("$.review").value(DEFAULT_REVIEW.toString()));
     }
 
     @Test
@@ -252,7 +260,8 @@ public class ArticleResourceIntTest {
         updatedArticle
             .title(UPDATED_TITLE)
             .content(UPDATED_CONTENT)
-            .status(UPDATED_STATUS);
+            .status(UPDATED_STATUS)
+            .review(UPDATED_REVIEW);
         ArticleDTO articleDTO = articleMapper.toDto(updatedArticle);
 
         restArticleMockMvc.perform(put("/api/articles")
@@ -267,6 +276,7 @@ public class ArticleResourceIntTest {
         assertThat(testArticle.getTitle()).isEqualTo(UPDATED_TITLE);
         assertThat(testArticle.getContent()).isEqualTo(UPDATED_CONTENT);
         assertThat(testArticle.getStatus()).isEqualTo(UPDATED_STATUS);
+        assertThat(testArticle.getReview()).isEqualTo(UPDATED_REVIEW);
     }
 
     @Test

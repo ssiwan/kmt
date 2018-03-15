@@ -52,12 +52,17 @@
             "fieldName": "status",
             "fieldType": "ArticleStatus",
             "fieldValues": "DRAFT,APPROVED"
+        },
+        {
+            "fieldName": "review",
+            "fieldType": "ArticleReview",
+            "fieldValues": "Outstanding,Good,Poor"
         }
     ],
     "changelogDate": "20180309165256",
-    "entityTableName": "article",
     "dto": "mapstruct",
-    "pagination": "pagination",
     "service": "serviceClass",
-    "jpaMetamodelFiltering": false
+    "entityTableName": "article",
+    "jpaMetamodelFiltering": false,
+    "pagination": "pagination"
 }

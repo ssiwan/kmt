@@ -1,6 +1,6 @@
 
 <div *ngIf="article">
-    <h2><span jhiTranslate="dhsKnowledgeManagementApp.article.detail.title">Article</span> {{article.id}}</h2>
+    <h2><span jhiTranslate="dhsKnowledgeManagementApp.article.detail.title">Article</span> - {{article.title}}</h2>
     <hr>
     <jhi-alert-error></jhi-alert-error>
     <dl class="row-md jh-entity-details">
@@ -17,6 +17,10 @@
         <dd>
             <span jhiTranslate="{{'dhsKnowledgeManagementApp.ArticleStatus.' + article.status}}">{{article.status}}</span>
         </dd>
+        <dt><span jhiTranslate="dhsKnowledgeManagementApp.article.review">Review</span></dt>
+        <dd>
+            <span jhiTranslate="{{'dhsKnowledgeManagementApp.ArticleReview.' + article.review}}">{{article.review}}</span>
+        </dd>
         <dt><span jhiTranslate="dhsKnowledgeManagementApp.article.tag">Tag</span></dt>
         <dd>
             <span *ngFor="let tag of article.tags; let last = last">
@@ -26,7 +30,7 @@
         <dt><span jhiTranslate="dhsKnowledgeManagementApp.article.changelog">Changelog</span></dt>
         <dd>
             <span *ngFor="let changelog of article.changelogs; let last = last">
-                <a [routerLink]="['/changelog', changelog?.id ]">{{changelog.modified}}  ({{changelog.userLogin}})</a><br/>
+                <a [routerLink]="['/changelog', changelog?.id ]">{{changelog.modified | date:'medium'}}  ({{changelog.userLogin}})</a><br/>
             </span>
         </dd>
     </dl>
