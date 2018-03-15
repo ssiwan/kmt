@@ -4,7 +4,7 @@
     </div>
     <div class="col-md-9">
         <h1 class="display-4" jhiTranslate="home.title">Welcome to CalFire Knowledge Management System</h1>
-        <p class="lead" jhiTranslate="home.subtitle">This is your homepage</p>
+        <!-- <p class="lead" jhiTranslate="home.subtitle">This is your homepage</p> -->
 
         <div [ngSwitch]="isAuthenticated()">
             <div class="alert alert-success" *ngSwitchCase="true">
@@ -21,7 +21,7 @@
                 <span jhiTranslate="global.messages.info.register.noaccount">You don't have an account yet?</span>
                 <a class="alert-link" routerLink="register" jhiTranslate="global.messages.info.register.link">Register a new account</a>
             </div>
-
+            <div  *ngSwitchCase="true">
             <hr>
             <h2>
                 <span>Magnet Board</span>
@@ -77,6 +77,7 @@
             </div>
             <hr/>
 
+            </div>
 
 
 

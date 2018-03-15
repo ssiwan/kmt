@@ -42,6 +42,15 @@ export class HomeComponent implements OnInit {
     goodChartData: number[];
     poorChartData: number[];
     finalChartData: any;
+    chartOptions = {
+        responsive: true,
+        title: {
+            display: true,
+            text: 'Knowledge Articles Scorecard',
+            fontSize: 14
+        }
+    };
+
     constructor(
         private principal: Principal,
         private loginModalService: LoginModalService,
@@ -54,39 +63,9 @@ export class HomeComponent implements OnInit {
     ) {
     }
 
-    chartOptions = {
-        responsive: true,
-        title: {
-            display: true,
-            text: 'Knowledge Articles Scorecard',
-            fontSize: 14
-        }       
-    };
-
-    
-xChartData = this.chartData();
-
-    chartData() {
-        const chartData = [
-            { data: this.outStandingChartData, label: 'Outstanding' },
-            { data: this.goodChartData, label: 'Good' },
-            { data: this.poorChartData, label: 'Poor' }
-        ];
-
-        return chartData;
-    }
-
-    chartDataNew = [
-    { data: [330, 600, 260, 700], label: 'Account A' },
-    { data: [120, 455, 100, 340], label: 'Account B' },
-    { data: [45, 67, 800, 500], label: 'Account C' }
-  ];
-
-  chartLabels = ['January', 'February', 'Mars', 'April'];
-
     getChartLabels() {
         return this.distinctTags;
-    }    
+    }
 
     onChartClick(event) {
         console.log(event);
@@ -116,7 +95,7 @@ xChartData = this.chartData();
         this.engineService.query({
             page: 0,
             size: 100,
-            sort: ""
+            sort: ''
         }).subscribe(
             (res: HttpResponse<Engine[]>) => this.onSuccessEngineQuery(res.body, res.headers),
             (res: HttpErrorResponse) => this.onError(res.message)
@@ -146,7 +125,6 @@ xChartData = this.chartData();
         this.totalItems = 0;
         this.totalStations = 0;
         this.totalTags = 0;
-        this.loadAll();
         this.principal.identity().then((account) => {
             this.account = account;
         });
@@ -178,8 +156,10 @@ xChartData = this.chartData();
         this.eventManager.subscribe('authenticationSuccess', (message) => {
             this.principal.identity().then((account) => {
                 this.account = account;
+                this.loadAll();
             });
         });
+
     }
 
     isAuthenticated() {
@@ -191,10 +171,7 @@ xChartData = this.chartData();
     }
 
     private onSuccess(data, headers) {
-        // this.links = this.parseLinks.parse(headers.get('link'));
         this.totalStations = headers.get('X-Total-Count');
-        // this.queryCount = this.totalItems;
-        // this.page = pagingParams.page;
         this.stations = data;
     }
 
@@ -229,8 +206,8 @@ xChartData = this.chartData();
     private onSuccessArticlesQuery(data, headers) {
         this.articles = data;
         const allTags = [];
-        data.forEach(article => {
-            article.tags.forEach(tag => {
+        data.forEach((article) => {
+            article.tags.forEach((tag) => {
                 allTags.push(tag.name);
                 this.groupBy(tag.name, article.review);
             });
@@ -244,11 +221,7 @@ xChartData = this.chartData();
 
         this.totalArticles = headers.get('X-Total-Count');
         this.getChartLabelsAndData();
-        this.isDataAvailable = true;        
-    }
-
-    getArtilePerType(data) {
-        return data.map(res => res.tags);
+        this.isDataAvailable = true;
     }
 
     private onSuccessTagsQuery(data, headers) {
@@ -264,19 +237,19 @@ xChartData = this.chartData();
         const outStanding = [];
         const good = [];
         const poor = [];
-        this.distinctTags.forEach(element => {
+        this.distinctTags.forEach((element) => {
             const tagData = this.outstandingArticles.get(element);
-            outStanding.push(tagData == undefined ? 0 : tagData)
+            outStanding.push(tagData === undefined ? 0 : tagData);
         });
 
-        this.distinctTags.forEach(element => {
+        this.distinctTags.forEach((element) => {
             const tagData = this.goodArticles.get(element);
-            good.push(tagData == undefined ? 0 : tagData)
+            good.push(tagData === undefined ? 0 : tagData);
         });
 
-        this.distinctTags.forEach(element => {
+        this.distinctTags.forEach((element) => {
             const tagData = this.poorArticles.get(element);
-            poor.push(tagData == undefined ? 0 : tagData)
+            poor.push(tagData === undefined ? 0 : tagData);
         });
 
         this.outStandingChartData = outStanding;
