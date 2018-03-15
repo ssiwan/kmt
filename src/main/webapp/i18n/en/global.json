@@ -10,7 +10,7 @@
                 "station": "Stations",
                 "engine": "Engines",
                 "changelog": "Changelogs",
-                "tag": "Tags",
+                "tag": "Article Types",
                 "article": "Articles",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },

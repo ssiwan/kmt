@@ -3,18 +3,18 @@
     "dhsKnowledgeManagementApp": {
         "tag" : {
             "home": {
-                "title": "Tags",
-                "createLabel": "Crear nuevo Tag",
-                "createOrEditLabel": "Crear o editar Tag"
+                "title": "Article Types",
+                "createLabel": "Crear nuevo Article Type",
+                "createOrEditLabel": "Crear o editar Article Type"
             },
-            "created": "Un nuevo Tag ha sido creado con el identificador {{ param }}",
-            "updated": "Un Tag ha sido actualizado con el identificador {{ param }}",
-            "deleted": "Un Tag ha sido eliminado con el identificador {{ param }}",
+            "created": "Un nuevo Article Type ha sido creado con el identificador {{ param }}",
+            "updated": "Un Article Type ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Article Type ha sido eliminado con el identificador {{ param }}",
             "delete": {
-                "question": "¿Seguro que quiere eliminar Tag {{ id }}?"
+                "question": "¿Seguro que quiere eliminar Article Type {{ id }}?"
             },
             "detail": {
-                "title": "Tag"
+                "title": "Article Type"
             },
             "name": "Name",
             "article": "Article"
