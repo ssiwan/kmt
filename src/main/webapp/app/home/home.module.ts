@@ -8,11 +8,15 @@ import { HOME_ROUTE, HomeComponent } from './';
 import { StatModule } from '../shared/stat';
 
 import { ScorecardModule } from '../shared/scorecard';
+
+import {ChartsModule} from 'ng2-charts';
+
 @NgModule({
     imports: [
         DhsKnowledgeManagementSharedModule,
         StatModule,
         ScorecardModule,
+        ChartsModule,
         RouterModule.forChild([ HOME_ROUTE ])
     ],
     declarations: [

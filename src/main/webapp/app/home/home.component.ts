@@ -10,7 +10,6 @@ import { TagService } from '../entities/tag/tag.service';
 import { Article } from '../entities/article/article.model';
 import { Tag } from '../entities/tag/tag.model';
 import { JhiEventManager, JhiAlertService } from 'ng-jhipster';
-import * as Chartist from 'chartist';
 import { Account, LoginModalService, Principal } from '../shared';
 
 @Component({
@@ -34,9 +33,15 @@ export class HomeComponent implements OnInit {
     totalItems: number;
     totalArticles: number;
     totalTags: number;
+    distinctTags: any[];
     outstandingArticles: Map<string, number> = new Map<string, number>();
     goodArticles: Map<string, number> = new Map<string, number>();
     poorArticles: Map<string, number> = new Map<string, number>();
+    isDataAvailable: boolean;
+    outStandingChartData: number[];
+    goodChartData: number[];
+    poorChartData: number[];
+    finalChartData: any;
     constructor(
         private principal: Principal,
         private loginModalService: LoginModalService,
@@ -50,76 +55,42 @@ export class HomeComponent implements OnInit {
     }
 
     chartOptions = {
-        responsive: true
+        responsive: true,
+        title: {
+            display: true,
+            text: 'Knowledge Articles Scorecard',
+            fontSize: 14
+        }       
     };
 
-    chartData = [
-        { data: [330, 600, 260, 700, 900], label: 'Outstanding' },
-        { data: [120, 455, 100, 340, 220], label: 'Good' },
-        { data: [45, 67, 800, 500, 200], label: 'Poor' }
-    ];
+    
+xChartData = this.chartData();
 
-    chartLabels = ['Station', 'Engine', 'Job', 'Hazards', 'Lessons'];
+    chartData() {
+        const chartData = [
+            { data: this.outStandingChartData, label: 'Outstanding' },
+            { data: this.goodChartData, label: 'Good' },
+            { data: this.poorChartData, label: 'Poor' }
+        ];
+
+        return chartData;
+    }
+
+    chartDataNew = [
+    { data: [330, 600, 260, 700], label: 'Account A' },
+    { data: [120, 455, 100, 340], label: 'Account B' },
+    { data: [45, 67, 800, 500], label: 'Account C' }
+  ];
+
+  chartLabels = ['January', 'February', 'Mars', 'April'];
+
+    getChartLabels() {
+        return this.distinctTags;
+    }    
 
     onChartClick(event) {
         console.log(event);
     }
-
-    drawPieChart() {
-        const dataEmailsSubscriptionChart = {
-            labels: ['Jan', 'Feb', 'Mar', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-            series: [
-                [542, 443, 320, 780, 553, 453, 326, 434, 568, 610, 756, 895]
-
-            ]
-        };
-        const optionsEmailsSubscriptionChart = {
-            axisX: {
-                showGrid: false
-            },
-            low: 0,
-            high: 1000,
-            chartPadding: { top: 0, right: 5, bottom: 0, left: 0 }
-        };
-        const responsiveOptions: any[] = [
-            ['screen and (max-width: 640px)', {
-                seriesBarDistance: 5,
-                axisX: {
-                    labelInterpolationFnc: function (value) {
-                        return value[0];
-                    }
-                }
-            }]
-        ];
-        const emailsSubscriptionChart = new Chartist.Bar('#emailsSubscriptionChart', dataEmailsSubscriptionChart, optionsEmailsSubscriptionChart, responsiveOptions);
-
-        //start animation for the Emails Subscription Chart
-        this.startAnimationForBarChart(emailsSubscriptionChart);
-    }
-
-    startAnimationForBarChart(chart) {
-        let seq2: any, delays2: any, durations2: any;
-
-        seq2 = 0;
-        delays2 = 80;
-        durations2 = 500;
-        chart.on('draw', function (data) {
-            if (data.type === 'bar') {
-                seq2++;
-                data.element.animate({
-                    opacity: {
-                        begin: seq2 * delays2,
-                        dur: durations2,
-                        from: 0,
-                        to: 1,
-                        easing: 'ease'
-                    }
-                });
-            }
-        });
-
-        seq2 = 0;
-    };
 
     sort() {
         const result = [this.predicate + ',' + (this.reverse ? 'asc' : 'desc')];
@@ -176,7 +147,6 @@ export class HomeComponent implements OnInit {
         this.totalStations = 0;
         this.totalTags = 0;
         this.loadAll();
-        this.drawPieChart();
         this.principal.identity().then((account) => {
             this.account = account;
         });
@@ -201,7 +171,7 @@ export class HomeComponent implements OnInit {
     }
 
     getTotalTags() {
-        return 'Total Tags : '.concat(this.totalTags.toString());
+        return 'Total Article Types : '.concat(this.totalTags.toString());
     }
 
     registerAuthenticationSuccess() {
@@ -235,38 +205,49 @@ export class HomeComponent implements OnInit {
 
     private groupBy(tagName, review) {
         switch (review) {
-            case 'Outstanding' :
+            case 'Outstanding': {
                 const x = this.outstandingArticles.get(tagName);
-                this.outstandingArticles.set(tagName, 
-                    x === undefined ? 0 :  x + 1);
-            case 'Good' :
+                this.outstandingArticles.set(tagName,
+                    x === undefined ? 1 : x + 1);
+                break;
+            }
+            case 'Good': {
                 const y = this.goodArticles.get(tagName);
-                this.goodArticles.set(tagName, 
-                    y === undefined ? 0 : y + 1);
-            case 'Poor' :
+                this.goodArticles.set(tagName,
+                    y === undefined ? 1 : y + 1);
+                break;
+            }
+            case 'Poor': {
                 const z = this.poorArticles.get(tagName);
-                this.poorArticles.set(tagName, 
-                    z === undefined ? 0 : z + 1);
+                this.poorArticles.set(tagName,
+                    z === undefined ? 1 : z + 1);
+                break;
+            }
         }
     }
 
     private onSuccessArticlesQuery(data, headers) {
         this.articles = data;
-
+        const allTags = [];
         data.forEach(article => {
             article.tags.forEach(tag => {
+                allTags.push(tag.name);
                 this.groupBy(tag.name, article.review);
             });
         });
 
+        this.distinctTags = allTags.filter((value, index, seriesValues) => (seriesValues.slice(0, index)).indexOf(value) === -1);
+        console.log(this.distinctTags);
         console.log('Outstanding : ', this.outstandingArticles);
         console.log('Good : ', this.goodArticles);
         console.log('Poor : ', this.poorArticles);
 
         this.totalArticles = headers.get('X-Total-Count');
+        this.getChartLabelsAndData();
+        this.isDataAvailable = true;        
     }
 
-    getArtilePerType(data){
+    getArtilePerType(data) {
         return data.map(res => res.tags);
     }
 
@@ -277,6 +258,36 @@ export class HomeComponent implements OnInit {
 
     private onError(error) {
         this.jhiAlertService.error(error.message, null, null);
+    }
+
+    private getChartLabelsAndData() {
+        const outStanding = [];
+        const good = [];
+        const poor = [];
+        this.distinctTags.forEach(element => {
+            const tagData = this.outstandingArticles.get(element);
+            outStanding.push(tagData == undefined ? 0 : tagData)
+        });
+
+        this.distinctTags.forEach(element => {
+            const tagData = this.goodArticles.get(element);
+            good.push(tagData == undefined ? 0 : tagData)
+        });
+
+        this.distinctTags.forEach(element => {
+            const tagData = this.poorArticles.get(element);
+            poor.push(tagData == undefined ? 0 : tagData)
+        });
+
+        this.outStandingChartData = outStanding;
+        this.goodChartData = good;
+        this.poorChartData = poor;
+
+        this.finalChartData = [
+            { data: this.outStandingChartData, label: 'Outstanding' },
+            { data: this.goodChartData, label: 'Good' },
+            { data: this.poorChartData, label: 'Poor' }
+        ];
     }
 
 }
