@@ -1,3 +1,7 @@
+[![Build Status](https://travis-ci.org/dhsynergetech/kmt.svg?branch=dhs-angular-build)](https://travis-ci.org/dhsynergetech/kmt) 
+[![Known Vulnerabilities](https://snyk.io/package/npm/name/badge.svg)](https://snyk.io/package/npm/name)
+
+
 # Technical Approach - DH Synergetech Knowledge Management Tool
 
 ## Prototype
@@ -27,7 +31,7 @@ After user clicks on article, they can select Create a new Article to create a K
 
 ![](https://github.com/dhsynergetech/kmt/blob/master/ImagesForReadme/KMTCreateArticle2.png)
 
-User can create an Article using Markdown in the Content Field and a Preview is automatically displayed of the Knowledge Article.
+User can create an Article using ![Markdown](http://commonmark.org/help/) in the Content Field and a Preview is automatically displayed of the Knowledge Article.
 
 ![](https://github.com/dhsynergetech/kmt/blob/master/ImagesForReadme/DHSKMTArticlePreview.png)
 
@@ -41,7 +45,7 @@ Knowledge Article has been created.
 
 #### Requirement 2: Have the ability to provide multiple levels and formats of information in KAs (e.g., bullet points for senior technical levels, scripted specific details for junior/non-technical staff).
 
-The DHS KMT includes summary level information at the Category level which can be expanded upon by selecting the relevant Article.  For example, for Station 23 – Forest Ranch user sees a list of Articles.
+The DHS KMT includes summary level information at the Category level which can be expanded upon by selecting the relevant Article.  For example, for Station 23 – Forest Ranch user sees a list of Articles. Also user may link multiple articles together by including other article links in the content.
 
 ![](https://github.com/dhsynergetech/kmt/blob/master/ImagesForReadme/Station23Information.png)
 
@@ -58,7 +62,7 @@ Only users with Captain role can approve Knowledge Articles by selecting Status 
 ### Knowledge Sharing
 #### Requirement 4: Allow for the promotion of process and information across systems and channels, as required.
 
-The DHS KMT is built with RESTful APIs published in Swagger, for integration with any application.  Using the RESTful APIs, other applications can call on web services from the KMT.  For example, another web application may get knowledge article information from the KMT to display on its web page.  This architecture supports the promotion of process and information across systems and channels as required. 
+The DHS KMT exposes a layer of RESTful APIs for integration with the UI and with any application.  The RESTful APIs are published on DHS KMT website using Swagger UI.  Using the RESTful APIs, other applications may invoke REST services from the KMT.  For example, another web application may get knowledge article information from the KMT to display on its web page.  This architecture supports the promotion of process and information across systems and channels as required. 
 
 ![](https://github.com/dhsynergetech/kmt/blob/master/ImagesForReadme/SwaggerAPIs.png)
 
@@ -77,7 +81,7 @@ When Articles are created, an email is sent to fire captains requesting their ap
 ### Knowledge Development
 #### Requirement 7: Have the ability to update and improve KAs and access the value of usage as input to predicting new records or record types.
 
-The DHS KMT is designed to use an article Review feature for users to assess the value of the article being viewed.  The reviews are recorded in the database and reflected in a scorecard on the homepage.  From the Article Page, user selects Edit.
+The DHS KMT is designed to use an article Review feature for users to assess the value of the article being viewed.  The review ratings are recorded in the database and reflected in a scorecard on the homepage.  From the Article Page, user selects Edit.
 
 ![](https://github.com/dhsynergetech/kmt/blob/master/ImagesForReadme/ArticlePage.png)
 
@@ -170,7 +174,8 @@ t.	Prototype and underlying platforms used to create and run the prototype are o
 
 ## Architectural Description / Code Flow
 
-The DHS KMT is built using the JHipster framework http://spring.io/blog/2015/02/10/introducing-jhipster.  JHipster is an open source project providing an integrated platform and development tools.  The DHS KMT is configured with Spring Boot java base, MySQL database, and Angular.js client.  The DHS KMT is deployed on Pivotal Cloud Foundry (PCF).
+The DHS KMT is built using Angular 4 and Spring Boot framework. The project scaffolding was created using the JHipster  https://www.jhipster.tech/, it is an open source project providing development tools and production ready generators.  The DHS KMT is a modern web app, responsive, arcti Spring Boot java base, MySQL database, and Angular.js client.  The DHS KMT is deployed on Pivotal Cloud Foundry (PCF).
+
 
 ## DHSKnowledgeManagement Development How-To's
 
@@ -199,24 +204,6 @@ specifying a newer version in [package.json](package.json). You can also run `ya
 Add the `help` flag on any command to see how you can use it. For example, `yarn help update`.
 
 The `yarn run` command will list all of the scripts available to run for this project.
-
-### Service workers
-
-Service workers are commented by default, to enable them please uncomment the following code.
-
-* The service worker registering script in index.html
-
-```html
-<script>
-    if ('serviceWorker' in navigator) {
-        navigator.serviceWorker
-        .register('./sw.js')
-        .then(function() { console.log('Service Worker Registered'); });
-    }
-</script>
-```
-
-Note: workbox creates the respective service worker and dynamically generate the `sw.js`
 
 ### Managing dependencies
 
