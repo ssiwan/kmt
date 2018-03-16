@@ -173,7 +173,20 @@ t.	Prototype and underlying platforms used to create and run the prototype are o
 
 ## Architectural Description / Code Flow
 
-The DHS KMT is built using Angular 4 and Spring Boot framework. The project scaffolding was created using the JHipster  https://www.jhipster.tech/, it is an open source project providing development tools and production ready generators.  The DHS KMT is a modern web app, responsive, arcti Spring Boot java base, MySQL database, and Angular.js client.  The DHS KMT is deployed on Pivotal Cloud Foundry (PCF).
+The DHS KMT is built using Angular 4 and Spring Boot framework. The project scaffolding was created using [JHipster](https://www.jhipster.tech), it is an open source project providing development tools and production ready generators.  The DHS KMT is a modern web app, mobile responsive, build on latest technologies (HTLM5/CSS3/JavaScript, Angular 4, Spring Boot/Spring REST MVC, Security, JPA and MySQL). The client side technologies used are Yarn for dependency management, webpack for compile/minify and hotreload of Angular+TypeScript, BrowserSync, Karma for Unit Tests, Angular 4 for data binding, validations, and Bootstrap for HTML components. The server side technologies include Maven for dependency management, Spring Boot, Liquibase for database schema tracking, Hibernate JPA, Spring Data JPA, Spring Security, Spring MVC REST, and Thymeleaf.  The DHS KMT is deployed on Pivotal Cloud Foundry (PCF) as a Java application using Spark version of ClearDB MySQL database service. 
+
+Architecture Layer        | Code Path      
+------------- |-------------
+Angular      | https://github.com/dhsynergetech/kmt/tree/master/src/main/webapp/app
+Localization | https://github.com/dhsynergetech/kmt/tree/master/src/main/webapp/i18n
+Swagger UI | https://github.com/dhsynergetech/kmt/tree/master/src/main/webapp/swagger-ui
+Spring Boot App | https://github.com/dhsynergetech/kmt/tree/master/src/main/java/com/dhs
+REST APIs | https://github.com/dhsynergetech/kmt/tree/master/src/main/java/com/dhs/web/rest
+JPA Repository | https://github.com/dhsynergetech/kmt/tree/master/src/main/java/com/dhs/repository
+Security | https://github.com/dhsynergetech/kmt/tree/master/src/main/java/com/dhs/security
+Config | https://github.com/dhsynergetech/kmt/tree/master/src/main/resources
+Unit Tests | https://github.com/dhsynergetech/kmt/tree/master/src/test
+Webpack | https://github.com/dhsynergetech/kmt/tree/master/webpack
 
 
 ## DHSKnowledgeManagement Development How-To's
@@ -181,67 +194,19 @@ The DHS KMT is built using Angular 4 and Spring Boot framework. The project scaf
 Before you can build this project, you must install and configure the following dependencies on your machine:
 
 1. [Node.js][]: We use Node to run a development web server and build the project.
-   Depending on your system, you can install Node either from source or as a pre-packaged bundle.
 2. [Yarn][]: We use Yarn to manage Node dependencies.
-   Depending on your system, you can install Yarn either from source or as a pre-packaged bundle.
-
-After installing Node, you should be able to run the following command to install development tools.
-You will only need to run this command when dependencies change in [package.json](package.json).
-
-    yarn install
+3. [Maven][]: We use Maven to manage Spring Boot dependencies and to run the development app server
+4. Clone the KMT repository using [git clone https://github.com/dhsynergetech/kmt.git]
+5. [cd kmt] change directory to kmt
+6. Run [yarn install] to install the node modules and tools.
 
 We use yarn scripts and [Webpack][] as our build system.
 
-Run the following commands in two separate terminals to create a blissful development experience where your browser
-auto-refreshes when files change on your hard drive.
+Run the following commands in two separate terminals to start webpack and the REST API application
 
     ./mvnw
     yarn start
-
-[Yarn][] is also used to manage CSS and JavaScript dependencies used in this application. You can upgrade dependencies by
-specifying a newer version in [package.json](package.json). You can also run `yarn update` and `yarn install` to manage dependencies.
-Add the `help` flag on any command to see how you can use it. For example, `yarn help update`.
-
-The `yarn run` command will list all of the scripts available to run for this project.
-
-### Managing dependencies
-
-For example, to add [Leaflet][] library as a runtime dependency of your application, you would run following command:
-
-    yarn add --exact leaflet
-
-To benefit from TypeScript type definitions from [DefinitelyTyped][] repository in development, you would run following command:
-
-    yarn add --dev --exact @types/leaflet
-
-Then you would import the JS and CSS files specified in library's installation instructions so that [Webpack][] knows about them:
-Edit [src/main/webapp/app/vendor.ts](src/main/webapp/app/vendor.ts) file:
-~~~
-import 'leaflet/dist/leaflet.js';
-~~~
-
-Edit [src/main/webapp/content/css/vendor.css](src/main/webapp/content/css/vendor.css) file:
-~~~
-@import '~leaflet/dist/leaflet.css';
-~~~
-Note: there are still few other things remaining to do for Leaflet that we won't detail here.
-
-For further instructions on how to develop with JHipster, have a look at [Using JHipster in development][].
-
-### Using angular-cli
-
-You can also use [Angular CLI][] to generate some custom client code.
-
-For example, the following command:
-
-    ng generate component my-component
-
-will generate few files:
-
-    create src/main/webapp/app/my-component/my-component.component.html
-    create src/main/webapp/app/my-component/my-component.component.ts
-    update src/main/webapp/app/app.module.ts
-
+    
 ## Building for production
 
 To optimize the DHSKnowledgeManagement application for production, run:
@@ -279,20 +244,13 @@ For more information, refer to the [Running tests page][].
 
 The DHS KMT security testing uses Vega https://subgraph.com/vega/.  Vega is used to detect web vulnerabilities such as cross site scripting and other web vulnerabilities.
 
-## Using Docker to simplify development
+## Using Docker for development
 
-You can use Docker to improve your JHipster development experience. A number of docker-compose configuration are available in the [src/main/docker](src/main/docker) folder to launch required third party services.
-
-For example, to start a mysql database in a docker container, run:
+Start a mysql database in a docker container, run:
 
     docker-compose -f src/main/docker/mysql.yml up -d
 
-To stop it and remove the container, run:
-
-    docker-compose -f src/main/docker/mysql.yml down
-
-You can also fully dockerize your application and all the services that it depends on.
-To achieve this, first build a docker image of your app by running:
+Build a docker image of DHS KMT app by running:
 
     ./mvnw verify -Pprod dockerfile:build
 
@@ -300,21 +258,15 @@ Then run:
 
     docker-compose -f src/main/docker/app.yml up -d
 
-For more information refer to [Using Docker and Docker-Compose][], this page also contains information on the docker-compose sub-generator (`jhipster docker-compose`), which is able to generate docker configurations for one or several JHipster applications.
-
 ## Continuous Integration
+Travis CI configuration is setup in https://github.com/dhsynergetech/kmt/blob/master/.travis.yml. 
 
-To configure CI for your project, run the ci-cd sub-generator (`jhipster ci-cd`), this will let you generate configuration files for a number of Continuous Integration systems. Consult the [Setting up Continuous Integration][] page for more information.
+Build Console
+[https://travis-ci.org/dhsynergetech/kmt/builds]
 
-[JHipster Homepage and latest documentation]: http://www.jhipster.tech
-[JHipster 4.14.0 archive]: http://www.jhipster.tech/documentation-archive/v4.14.0
 
-[Using JHipster in development]: http://www.jhipster.tech/documentation-archive/v4.14.0/development/
-[Using Docker and Docker-Compose]: http://www.jhipster.tech/documentation-archive/v4.14.0/docker-compose
-[Using JHipster in production]: http://www.jhipster.tech/documentation-archive/v4.14.0/production/
-[Running tests page]: http://www.jhipster.tech/documentation-archive/v4.14.0/running-tests/
-[Setting up Continuous Integration]: http://www.jhipster.tech/documentation-archive/v4.14.0/setting-up-ci/
-
+## Appendix
+### References
 [Node.js]: https://nodejs.org/
 [Yarn]: https://yarnpkg.org/
 [Webpack]: https://webpack.github.io/
