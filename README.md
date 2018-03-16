@@ -242,7 +242,7 @@ For more information, refer to the [Running tests page][].
 *US Digital Service Playbook:*
 > *Play 11 - Manage Security and Privacy through Reusable Processes*
 
-The DHS KMT security testing uses Vega https://subgraph.com/vega/.  Vega is used to detect web vulnerabilities such as cross site scripting and other web vulnerabilities.
+The DHS KMT security testing uses Snyk https://snyk.io.  Snyk is used to detect web vulnerabilities such as cross site scripting and other web vulnerabilities.
 
 ## Using Docker for development
 
