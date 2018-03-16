@@ -175,6 +175,8 @@ t.	Prototype and underlying platforms used to create and run the prototype are o
 
 The DHS KMT is built using Angular 4 and Spring Boot framework. The project scaffolding was created using [JHipster](https://www.jhipster.tech), it is an open source project providing development tools and production ready generators.  The DHS KMT is a modern web app, mobile responsive, build on latest technologies (HTLM5/CSS3/JavaScript, Angular 4, Spring Boot/Spring REST MVC, Security, JPA and MySQL). The client side technologies used are Yarn for dependency management, webpack for compile/minify and hotreload of Angular+TypeScript, BrowserSync, Karma for Unit Tests, Angular 4 for data binding, validations, and Bootstrap for HTML components. The server side technologies include Maven for dependency management, Spring Boot, Liquibase for database schema tracking, Hibernate JPA, Spring Data JPA, Spring Security, Spring MVC REST, and Thymeleaf.  The DHS KMT is deployed on Pivotal Cloud Foundry (PCF) as a Java application using Spark version of ClearDB MySQL database service. 
 
+![](https://github.com/dhsynergetech/kmt/blob/master/ImagesForReadme/ArchitectureFlow.PNG?raw=true)
+
 Architecture Layer        | Code Path      
 ------------- |-------------
 Angular      | https://github.com/dhsynergetech/kmt/tree/master/src/main/webapp/app
