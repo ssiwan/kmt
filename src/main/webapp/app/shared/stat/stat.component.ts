@@ -11,12 +11,20 @@ export class StatComponent implements OnInit {
     @Input() count: number;
     @Input() label: string;
     @Input() data: number;
+    @Input() stationId: number;
     @Input() engines: Array<{ id: number, number: number, status: string, articles: any }>;
     @Output() event: EventEmitter<any> = new EventEmitter();
+    isEnginessent: boolean;
 
     constructor() { }
 
-    ngOnInit() { }
+    ngOnInit() {
+        if (this.engines === undefined) {
+                this.isEnginessent = false;
+            } else {
+                this.isEnginessent = true;
+            }
+     }
 
     getClass(status) {
         switch (status) {

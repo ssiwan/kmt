@@ -125,6 +125,7 @@ export class HomeComponent implements OnInit {
         this.totalItems = 0;
         this.totalStations = 0;
         this.totalTags = 0;
+        this.loadAll();
         this.principal.identity().then((account) => {
             this.account = account;
         });

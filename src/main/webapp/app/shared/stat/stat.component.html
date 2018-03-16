@@ -2,14 +2,15 @@
     <div class="card-header">
         <div class="row">
             <div class="col col-xs-9 text-center ">
-                <div class="d-block">{{label}}</div>
+                <div class="d-block" *ngIf="!isEnginessent">{{label}}</div>
+                <a [routerLink]="['../station', stationId ]" *ngIf="isEnginessent">{{label}}</div>
             </div>
         </div>
     </div>
     <div *ngFor="let engine of engines ; trackBy: getEngineId">
         <div class="card-footer bg-{{getClass(engine.status)}}">
             <i class="fa {{getIcon(engine.status)}} fa-2x"></i>
-            <span class="float-right">{{engine.number}}</span>
+           <a [routerLink]="['../engine', engine.id ]" class="float-right">{{engine.number}}</a>
         </div>
     </div>
 </div>
