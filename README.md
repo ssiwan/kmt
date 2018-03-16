@@ -1,5 +1,4 @@
 [![Build Status](https://travis-ci.org/dhsynergetech/kmt.svg?branch=dhs-angular-build)](https://travis-ci.org/dhsynergetech/kmt) 
-[![Known Vulnerabilities](https://snyk.io/test/github/dhsynergetech/kmt/badge.svg)](https://snyk.io/test/dhsynergetech/kmt)
 
 # Technical Approach - DH Synergetech Knowledge Management Tool
 
@@ -247,6 +246,7 @@ For more information, refer to the [Running tests page][].
 The DHS KMT security testing uses Snyk https://snyk.io.  Snyk is used to detect web vulnerabilities such as cross site scripting and other web vulnerabilities.
 
 ![](https://github.com/dhsynergetech/kmt/blob/master/ImagesForReadme/Snyk%20Vulnerability%20Report.png?raw=true)
+The identified vulnerabilities are related to spring boot packages, and will be addressed in future sprints.
 
 ## Using Docker for development
 
