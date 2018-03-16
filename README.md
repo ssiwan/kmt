@@ -1,6 +1,5 @@
 [![Build Status](https://travis-ci.org/dhsynergetech/kmt.svg?branch=dhs-angular-build)](https://travis-ci.org/dhsynergetech/kmt) 
-[![Known Vulnerabilities](https://snyk.io/package/npm/name/badge.svg)](https://snyk.io/package/npm/name)
-
+[![Known Vulnerabilities](https://snyk.io/test/github/dhsynergetech/kmt/badge.svg)](https://snyk.io/test/dhsynergetech/kmt)
 
 # Technical Approach - DH Synergetech Knowledge Management Tool
 
