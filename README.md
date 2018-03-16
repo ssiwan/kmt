@@ -244,6 +244,8 @@ For more information, refer to the [Running tests page][].
 
 The DHS KMT security testing uses Snyk https://snyk.io.  Snyk is used to detect web vulnerabilities such as cross site scripting and other web vulnerabilities.
 
+![](https://github.com/dhsynergetech/kmt/blob/master/ImagesForReadme/Snyk%20Vulnerability%20Report.png?raw=true)
+
 ## Using Docker for development
 
 Start a mysql database in a docker container, run:
@@ -259,21 +261,28 @@ Then run:
     docker-compose -f src/main/docker/app.yml up -d
 
 ## Continuous Integration
-Travis CI configuration is setup in https://github.com/dhsynergetech/kmt/blob/master/.travis.yml. 
+We are using Travis CI for automated build and deploy. The configuration setup is in https://github.com/dhsynergetech/kmt/blob/master/.travis.yml. 
 
-Build Console
+Build Console is at
+
 [https://travis-ci.org/dhsynergetech/kmt/builds]
 
+![](https://github.com/dhsynergetech/kmt/blob/master/ImagesForReadme/Travis%20CI%20Automated%20Build.png?raw=true)
 
 ## Appendix
 ### References
-[Node.js]: https://nodejs.org/
-[Yarn]: https://yarnpkg.org/
-[Webpack]: https://webpack.github.io/
-[Angular CLI]: https://cli.angular.io/
-[BrowserSync]: http://www.browsersync.io/
-[Karma]: http://karma-runner.github.io/
-[Jasmine]: http://jasmine.github.io/2.0/introduction.html
-[Protractor]: https://angular.github.io/protractor/
-[Leaflet]: http://leafletjs.com/
-[DefinitelyTyped]: http://definitelytyped.org/
+[Node.js](https://nodejs.org/): https://nodejs.org/
+
+[Yarn](https://yarnpkg.org/): https://yarnpkg.org/
+
+[Webpack](https://webpack.github.io/): https://webpack.github.io/
+
+[Angular CLI](https://cli.angular.io/): https://cli.angular.io/
+
+[BrowserSync](http://www.browsersync.io/): http://www.browsersync.io/
+
+[Karma](http://karma-runner.github.io/): http://karma-runner.github.io/
+
+[Jasmine](http://jasmine.github.io/2.0/introduction.html): http://jasmine.github.io/2.0/introduction.html
+
+[Spring Boot](https://projects.spring.io/spring-boot/): https://projects.spring.io/spring-boot/
