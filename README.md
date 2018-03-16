@@ -77,11 +77,19 @@ When Articles are created, an email is sent to fire captains requesting their ap
 ### Knowledge Development
 #### Requirement 7: Have the ability to update and improve KAs and access the value of usage as input to predicting new records or record types.
 
-The DHS KMT is designed to use the Tag feature for users to assess the value of the article being viewed.  The tags are recorded in the database and reflected in a scorecard on the homepage.
+The DHS KMT is designed to use an article Review feature for users to assess the value of the article being viewed.  The reviews are recorded in the database and reflected in a scorecard on the homepage.  From the Article Page, user selects Edit.
+
+![](https://github.com/dhsynergetech/kmt/blob/master/ImagesForReadme/ArticlePage.png)
+
+User then selects rating from pulldown list.
+
+![](https://github.com/dhsynergetech/kmt/blob/master/ImagesForReadme/ArticleReview.png)
 
 #### Requirement 8: Show innovation by learning from existing records (e.g., types, content, usage) and prompting to create new KAs.
 
-The scorecard is used to learn from existing records and prompt the creation of new articles.
+The scorecard is used to learn from existing records and prompt the creation of new articles.  In the Scorecard, the types of Articles are scored for number of Outstanding, Good, or Poor ratings.  This tells KMT authors how often articles are used and how on target the various article types are.  This helps shape creation of future articles.
+
+![](https://github.com/dhsynergetech/kmt/blob/master/ImagesForReadme/Scorecard.png)
 
 ## DHS Agile Methodology
 ### User Involvement in Design
