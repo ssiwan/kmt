@@ -157,13 +157,13 @@ d.	Used at least a minimum of three (3) user-centric design techniques and/or to
 e.	Used GitHub to document code commits | DHS used the following GitHub repository: https://github.com/dhsynergetech/kmt
 f.	Used Swagger to document the RESTful API, and provided a link to the Swagger API | Restful APIs for the DHS Knowledge Management tool are in Swagger at: https://dhsknowledgemanagement.cfapps.io/#/admin/docs 
 g.	Complied with Section 508 of the Americans with Disabilities Act and WCAG 2.0 | 508 compliance was tested with Wave http://wave.webaim.org/.
-h.	Created or used a design style guide and/or pattern library | Used jHipster framework with AngularJS code.
+h.	Created or used a design style guide and/or pattern library | Used jHipster framework with Angular and Spring Boot.
 i.	Performed usability tests with people | The Product Manager is a former firefighter who performed testing and facilitated user testing with the other firefighters.
 j.	Used an iterative approach, where feedback informed subsequent work or versions of the prototype | The DHS KMT was developed in two iterations (sprints) and reviewed by users during each sprint review.
 k.	Created a prototype that works on multiple devices, and presents a responsive design | The DHS KMT was developed on a responsive platform and tested on multiple devices during development iterations.
-l.	Used at least five (5) modern and open-source technologies, regardless of architectural layer (frontend, backend, etc.) | The 5 modern and open-source technologies used in the DHSynergetech KMT are: 1.	Pivotal Cloud Foundry (Pivotal.io); 2.	JHipster development platform (jhipster.tech); 3.	Angular javascript library for user interfaces (angularjs.org); 4.	MySQL database (mysql.com); and 5.	 GitHub source code management and collaboration tools (github.com)
+l.	Used at least five (5) modern and open-source technologies, regardless of architectural layer (frontend, backend, etc.) | The 5 modern and open-source technologies used in the DHSynergetech KMT are: 1.	Pivotal Cloud Foundry (Pivotal.io); 2.	JHipster development platform (jhipster.tech); 3.	Angular javascript library for user interfaces (angular.io); 4.	MySQL database (mysql.com); and 5.	 GitHub source code management and collaboration tools (github.com)
 m.	Deployed the prototype on an Infrastructure as a Service (IaaS) or Platform as Service (PaaS) provider, and indicated which provider they used | The DHSynergetech KMT was deployed on Pivotal.io: ![Pivotal](https://github.com/dhsynergetech/kmt/blob/master/ImagesForReadme/pivotalio.png)
-n.	Developed automated unit tests for their code | Unit tests are run by [Karma][] and written with [Jasmine].
+n.	Developed automated unit tests for their code | Unit tests are run by Karma and written with Jasmine. JUnit tests were written for Java and Mockito for mock ups.
 o.	Setup or used a continuous integration system to automate the running of tests and continuously deployed their code to their IaaS or PaaS provider | Used Travis CI (travis-ci.org) for Continuous Integration.
 p.	Setup or used configuration management | Used GitHub configuration management: ![GitHub](https://github.com/dhsynergetech/kmt/blob/master/ImagesForReadme/GitHub.png)
 q.	Setup or used continuous monitoring | Used PCF Metrics (pivotal.io) for continuous monitoring of the DHS Knowledge Management application: ![PCF Metrics](https://github.com/dhsynergetech/kmt/blob/master/ImagesForReadme/PCFMetrics.png)
@@ -195,14 +195,14 @@ Webpack | https://github.com/dhsynergetech/kmt/tree/master/webpack
 
 Before you can build this project, you must install and configure the following dependencies on your machine:
 
-1. [Node.js][]: We use Node to run a development web server and build the project.
-2. [Yarn][]: We use Yarn to manage Node dependencies.
-3. [Maven][]: We use Maven to manage Spring Boot dependencies and to run the development app server
-4. Clone the KMT repository using [git clone https://github.com/dhsynergetech/kmt.git]
-5. [cd kmt] change directory to kmt
-6. Run [yarn install] to install the node modules and tools.
+1. `Node.js`: We use Node to run a development web server and build the project.
+2. `Yarn`: We use Yarn to manage Node dependencies.
+3. `Maven`: We use Maven to manage Spring Boot dependencies and to run the development app server
+4. Clone the KMT repository using `git clone https://github.com/dhsynergetech/kmt.git`
+5. `cd kmt` change directory to kmt
+6. Run `yarn install` to install the node modules and tools.
 
-We use yarn scripts and [Webpack][] as our build system.
+We use yarn scripts and Webpack as our build system.
 
 Run the following commands in two separate terminals to start webpack and the REST API application
 
