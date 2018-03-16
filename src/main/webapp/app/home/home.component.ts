@@ -215,11 +215,6 @@ export class HomeComponent implements OnInit {
         });
 
         this.distinctTags = allTags.filter((value, index, seriesValues) => (seriesValues.slice(0, index)).indexOf(value) === -1);
-        // console.log(this.distinctTags);
-        // console.log('Outstanding : ', this.outstandingArticles);
-        // console.log('Good : ', this.goodArticles);
-        // console.log('Poor : ', this.poorArticles);
-
         this.totalArticles = headers.get('X-Total-Count');
         this.getChartLabelsAndData();
         this.isDataAvailable = true;
